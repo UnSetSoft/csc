@@ -20,14 +20,14 @@ npm install
 
 **Framework (Min):**
 ```
-npm run build-css:min
+npm run start:min
 ```
 
 or 
 
 **Framework:**
 ```
-npm run build-css
+npm run start
 ```
 
 > **Note:** Do not edit ".css" files, only edit ".scss" files.
