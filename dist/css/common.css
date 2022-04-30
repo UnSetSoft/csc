@@ -1,0 +1,170 @@
+@charset "UTF-8";
+@import url(https://fonts.googleapis.com/css?family=Baloo);
+@import url("https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kosugi+Maru&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500;700&display=swap");
+a {
+  color: #ffffff;
+  font-family: "Maven Pro", sans-serif;
+  font-weight: 400;
+  transition: all 2s ease-in-out; }
+  a:hover {
+    text-decoration: none;
+    color: #f0f8ff; }
+  a:disabled {
+    opacity: 0.5;
+    cursor: not-allowed; }
+  a:disabled {
+    opacity: 0.5;
+    cursor: not-allowed; }
+  a.highlight {
+    font-weight: 500;
+    text-decoration: underline;
+    text-underline-offset: 3px; }
+    a.highlight.kg__primary {
+      color: #da1d6c; }
+  a .highlight {
+    font-weight: 500;
+    text-decoration: underline;
+    text-underline-offset: 3px; }
+    a .highlight.kg__primary {
+      color: #da1d6c; }
+
+p {
+  font-family: "Baloo", "Arial Narrow", Arial, sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0.5px;
+  color: #8c8c8c; }
+  p.b-400 {
+    font-weight: 400; }
+  p.b-500 {
+    font-weight: 500; }
+  p.b-700 {
+    font-weight: 700; }
+  p:lang(ja) {
+    font-family: "Kosugi Maru", "Noto Serif JP", "游ゴシック", "メイリオ", "meiryo", sans-serif; }
+    p:lang(ja).noto-serif-jp {
+      font-family: "Noto Serif JP"; }
+  p.highlight {
+    font-weight: 500;
+    text-decoration: underline;
+    text-underline-offset: 3px; }
+    p.highlight.kg__primary {
+      color: #da1d6c; }
+  p .highlight {
+    font-weight: 500;
+    text-decoration: underline;
+    text-underline-offset: 3px; }
+    p .highlight.kg__primary {
+      color: #da1d6c; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Nunito", sans-serif;
+  font-weight: 500;
+  line-height: 1.2;
+  margin-bottom: 5px; }
+  h1.b-400,
+  h2.b-400,
+  h3.b-400,
+  h4.b-400,
+  h5.b-400,
+  h6.b-400 {
+    font-weight: 400; }
+  h1.b-500,
+  h2.b-500,
+  h3.b-500,
+  h4.b-500,
+  h5.b-500,
+  h6.b-500 {
+    font-weight: 500; }
+  h1.b-700,
+  h2.b-700,
+  h3.b-700,
+  h4.b-700,
+  h5.b-700,
+  h6.b-700 {
+    font-weight: 700; }
+  h1:lang(ja),
+  h2:lang(ja),
+  h3:lang(ja),
+  h4:lang(ja),
+  h5:lang(ja),
+  h6:lang(ja) {
+    font-family: "Kosugi Maru", "Noto Serif JP", "游ゴシック", "メイリオ", "meiryo", sans-serif; }
+    h1:lang(ja).noto-serif-jp,
+    h2:lang(ja).noto-serif-jp,
+    h3:lang(ja).noto-serif-jp,
+    h4:lang(ja).noto-serif-jp,
+    h5:lang(ja).noto-serif-jp,
+    h6:lang(ja).noto-serif-jp {
+      font-family: "Noto Serif JP"; }
+  h1.highlight,
+  h2.highlight,
+  h3.highlight,
+  h4.highlight,
+  h5.highlight,
+  h6.highlight {
+    font-weight: 500;
+    text-decoration: underline;
+    text-underline-offset: 3px; }
+    h1.highlight.kg__primary,
+    h2.highlight.kg__primary,
+    h3.highlight.kg__primary,
+    h4.highlight.kg__primary,
+    h5.highlight.kg__primary,
+    h6.highlight.kg__primary {
+      color: #da1d6c; }
+  h1 .highlight,
+  h2 .highlight,
+  h3 .highlight,
+  h4 .highlight,
+  h5 .highlight,
+  h6 .highlight {
+    font-weight: 500;
+    text-decoration: underline;
+    text-underline-offset: 3px; }
+    h1 .highlight.kg__primary,
+    h2 .highlight.kg__primary,
+    h3 .highlight.kg__primary,
+    h4 .highlight.kg__primary,
+    h5 .highlight.kg__primary,
+    h6 .highlight.kg__primary {
+      color: #da1d6c; }
+
+button {
+  font-family: "Maven Pro", sans-serif;
+  font-size: 1rem;
+  display: inline-block;
+  font-weight: bold;
+  line-height: 1.5;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  background-color: #2d2c2c;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  border-radius: 0.25rem;
+  border: 0px;
+  transition: all 2s ease-in-out;
+  color: #ffffff; }
+  button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed; }
+  button:lang(ja) {
+    font-family: "Kosugi Maru", "Noto Serif JP", "游ゴシック", "メイリオ", "meiryo", sans-serif; }
+  button.kg__primary__btn {
+    background-color: #da1d6c;
+    color: #ffffff; }
+    button.kg__primary__btn:hover {
+      background-color: #971561; }

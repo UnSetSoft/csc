@@ -1,0 +1,49 @@
+@import url(https://fonts.googleapis.com/css?family=Baloo);
+@import url("https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;700&display=swap');
+@import './lang/ja.scss';
+// Fonts
+$font-family-franklin-mothic-medium: "Franklin Gothic Medium", "Arial Narrow",
+  Arial, sans-serif;
+$font-family-san-serif: sans-serif;
+$font-family-baloo: "Baloo", "Arial Narrow", Arial, sans-serif;
+$font-family-maven-pro: "Maven Pro", sans-serif;
+$font-family-nunito: "Nunito", sans-serif;
+// Font-sizes
+$font-size-base: 1rem;
+$font-size-small: 12px;
+
+// Buttons
+$btn-default-font: $font-family-maven-pro;
+$btn-width: 128px;
+$btn-width-max: 100%;
+$btn-width-min: 30px;
+$btn-font-weight: bold;
+$btn-padding: 0.375rem 0.75rem;
+
+// Anchors
+$anchor-color: $color-white;
+$anchor-color-hover: $color-aliceblue;
+$anchor-text-decoration: none;
+$anchor-font-weight: 400;
+$anchor-font-size: $font-size-base;
+$anchor-default-font-family: $font-family-maven-pro;
+
+// Paragraphs
+$paragraph-default-font-family: $font-family-baloo;
+$paragraph-font-size: $font-size-base;
+$paragraph-font-weight: 400;
+$paragraph-line-height: 1.5;
+$paragraph-letter-spacing: 0.5px;
+$paragraph-color: $color-dark-light;
+
+// Transitions
+$transition-all: all 2s ease-in-out;
+// headings
+$headings-margin-bottom: 10px * 0.5;
+$headings-font-weight: 500;
+$headings-line-height: 1.2;
+// Opacity
+$opacity-05: 0.5;
+// Cursor
+$cursor: pointer;
