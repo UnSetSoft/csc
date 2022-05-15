@@ -6,7 +6,7 @@
   "main": "build.js",
   "scripts": {
     "build:develop": "nodemon ./build.js -e js,scss -x",
-    "build-css:build": "node ./build.js"
+    "css:build": "node ./build.js"
   },
   "devDependencies": {
     "node-sass": "^7.0.1",
