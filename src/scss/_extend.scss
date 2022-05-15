@@ -40,9 +40,6 @@
     &-block {
       display: map-get($display, block);
     }
-    &-active {
-      background-color: clr(buttons, activebtn);
-    }
     &-primary {
       background-color: clr(buttons, secondary);
       &:hover {
@@ -82,12 +79,6 @@
 
     &-100 {
       width: 100%;
-      &-support {
-        @include mq(desktop) {
-          width: 232px;
-          height: 163px;
-        }
-      }
     }
   }
 }
