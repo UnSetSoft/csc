@@ -8,7 +8,7 @@ The updates will be published little by little and will not follow a specific or
 
 > Feel free to Fork and add things if you want to add more styles or fix existing ones.
 
-For how to use check the [wiki](https://kagaricssdoc.netlify.app/docs/intro) (Work in Progress).
+For how to use check the [wiki](https://kagaricssdoc.netlify.app/docs/Getting%20started/intro) (Work in Progress).
 
 
 ## How to install
