@@ -12,7 +12,7 @@ The updates will be published little by little and will not follow a specific or
 ### Html
 ```html
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/kagaristyle@1.0.1/dist/css/common.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/kagaristyle@latest/dist/css/common.min.css">
 
 ```
 ### Express
