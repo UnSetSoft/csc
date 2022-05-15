@@ -6,6 +6,18 @@ The updates will be published little by little and will not follow a specific or
 
 > Feel free to Fork and add things if you want to add more styles or fix existing ones.
 
+
+# Import in your
+
+```html
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/kagaristyle@1.0.1/dist/css/common.min.css">
+
+```
+
+
+
+
 # How to install
 
 Clone the repository and then run the following command:
