@@ -10,43 +10,6 @@ The updates will be published little by little and will not follow a specific or
 
 For how to use check the [wiki](https://kagaricssdoc.netlify.app/docs/intro) (Work in Progress).
 
-# Import in your project
-
-### Html
-
-```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/kagaristyle/dist/css/common.min.css">
-```
-or
-```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/KagariSoft/KagariCSS@latest/dist/css/common.min.css">
-```
-this other option is more recomended, because  the first option takes some time to process the changes.
-
-### Express
-```js
-
-const express = require("express");
-const path = require("path");
-const app = express();
-const port = process.env.PORT || 5000;
-
-app.use('/css', express.static(__dirname + '/node_modules/kagaristyle/dist/css'));
-
-app.get('/', function(req, res) {
-    res.sendFile(path.join(__dirname, '/index.html'));
-  });
-
-app.listen(port);
-console.log("Server started at http://localhost:" + port);
-
-```
-and inside your html file:
-
-```html
-<link rel="stylesheet" href="/css/common.min.css" />
-```
-
 
 ## How to install
 
