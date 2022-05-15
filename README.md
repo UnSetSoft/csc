@@ -6,6 +6,7 @@ The updates will be published little by little and will not follow a specific or
 
 > Feel free to Fork and add things if you want to add more styles or fix existing ones.
 
+For how to use check the [wiki](https://github.com/KagariSoft/KagariCSS/wiki) (Work in Progress).
 
 # Import in your project
 
