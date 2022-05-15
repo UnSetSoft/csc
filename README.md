@@ -1,5 +1,7 @@
 # KagariCSS
 
+[![CSS (node-sass)](https://github.com/KagariSoft/KagariCSS/actions/workflows/compile.yml/badge.svg)](https://github.com/KagariSoft/KagariCSS/actions/workflows/compile.yml)
+
 This Framework plans to cover only the important and necessary tags, as well as necessary styles, on the other hand, this Framework is oriented to a 2 typography design, the japanese language and the western typography (english, spanish). Also this Framework is based on Bootstrap.
 
 The updates will be published little by little and will not follow a specific order, so some styles will not be prioritized, for example: Styles for the mobile version, or very specific styles.
