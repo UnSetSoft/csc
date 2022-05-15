@@ -18,7 +18,9 @@ jobs:
     steps:
       - name: Clone repository
         uses: actions/checkout@v3
-
+        with:
+          persist-credentials: false # otherwise, the token used is the GITHUB_TOKEN, instead of your personal access token.
+          fetch-depth: 0 # otherwise, there would be errors pushing refs to the destination repository.
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
@@ -33,7 +35,7 @@ jobs:
         run: |
           git config --local user.name "KagariSoft-dev "
           git add .
-          git commit -m "🏗️ Files updated"
+          git commit -m "🏗️ Files updated" -a
       - name: Push changes # push the output folder to your repo
         uses: ad-m/github-push-action@master
         with:
