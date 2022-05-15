@@ -99,9 +99,6 @@
     &-Baloo {
       font-family: $font-family-Baloo;
     }
-    &-block {
-      display: map-get($display, block);
-    }
     &-vertical {
       writing-mode: tb-rl;
     }
