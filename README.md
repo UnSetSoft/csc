@@ -7,7 +7,7 @@ The updates will be published little by little and will not follow a specific or
 > Feel free to Fork and add things if you want to add more styles or fix existing ones.
 
 
-# Import in your
+# Import in your html
 
 ```html
 
