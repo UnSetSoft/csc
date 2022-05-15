@@ -14,32 +14,21 @@ Clone the repository and then run the following command:
 npm install
 ```
 
-# How to run (Development)
+# How to build (Development)
 
-**Framework (Min):**
+This option will allow you to make live changes and view them instantly.
+
 ```
-npm run start:min
+npm run build:develop
 ```
 
-or 
+# How to build
 
-**Framework:**
+This option will only compile the css 
+
 ```
-npm run start
+npm run build-css:build
 ```
+
 
 > **Note:** Do not edit ".css" files, only edit ".scss" files.
-
-
-## How to compile
-
-**To compile the framework (Min):**
-```
-npm run build-css:min
-```
-or
-
-**To compile the framework:**
-```
-npm run build-css
-```
