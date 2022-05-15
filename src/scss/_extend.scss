@@ -18,6 +18,7 @@
   transition: all 0.2s ease-in-out;
   text-decoration: none; // if is link, the css button remove the underline
   display: inline-block;
+  width: 100px;
   @include mq(mobile) {
     padding: 7px;
   }
