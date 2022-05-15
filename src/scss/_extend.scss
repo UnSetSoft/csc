@@ -57,7 +57,6 @@
       background-color: clr(buttons, warning);
       &:hover {
         background-color: lighten(clr(buttons, warning), 9%);
-        color: white;
       }
     }
     &-danger {
