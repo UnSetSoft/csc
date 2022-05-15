@@ -13,11 +13,16 @@ For how to use check the [wiki](https://kagaricssdoc.netlify.app/docs/intro) (Wo
 # Import in your project
 
 ### Html
+
 ```html
-
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/kagaristyle/dist/css/common.min.css">
-
 ```
+or
+```html
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/KagariSoft/KagariCSS@latest/dist/css/common.min.css">
+```
+this other option is more recomended, because  the first option takes some time to process the changes.
+
 ### Express
 ```js
 
