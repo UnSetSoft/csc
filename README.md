@@ -13,7 +13,7 @@ For how to use check the [wiki](https://kagaricssdoc.netlify.app/docs/intro) (Wo
 ### Html
 ```html
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/kagaristyle@latest/dist/css/common.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/kagaristyle/dist/css/common.min.css">
 
 ```
 ### Express
