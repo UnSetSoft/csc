@@ -1,16 +1,16 @@
 {
-  "name": "KagariCSS",
-  "version": "0.0.2.a",
+  "name": "kagaristyle",
+  "version": "1.0.0",
   "license": "MIT",
   "author": "Neyunse",
+  "main": "build.js",
   "scripts": {
-    "start:min": "nodemon -e scss -x \"yarn build-css:min\"",
-    "start": "nodemon -e scss -x \"yarn build-css\"",
-    "build-css:min": "node-sass --include-path scss src/scss/common.scss dist/css/common.min.css --output-style compressed", 
-    "build-css": "node-sass --include-path scss src/scss/common.scss dist/css/common.css"
+    "build:develop": "nodemon ./build.js -e js,scss -x",
+    "build-css:build": "node ./build.js"
   },
   "devDependencies": {
     "node-sass": "^7.0.1",
-    "nodemon": "^2.0.16"
+    "nodemon": "^2.0.16",
+    "np": "^7.6.1"
   }
 }
