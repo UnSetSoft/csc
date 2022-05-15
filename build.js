@@ -12,10 +12,8 @@ sass.render(
     if (!error) {
      await fs.writeFile("./dist/css/common.min.css", result.css, function (err) {
         if (!err) {
-          console.log(result);
         }
       });
     }
-    console.log(result);
   }
 );
