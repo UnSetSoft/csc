@@ -30,14 +30,14 @@ jobs:
           npx --package node-sass@latest node-sass --version
           npx --package node-sass@latest node-sass --include-path scss src/scss/common.scss dist/css/common.min.css --output-style compressed
 
-    - name: Commit files # transfer the new html files back into the repository
-      run: |
-        git config --local user.name "KagariSoft-dev "
-        git add .
-        git commit -m "🏗️ Files updated"
-    - name: Push changes # push the output folder to your repo
-      uses: ad-m/github-push-action@master
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        force: true
+      - name: Commit files # transfer the new html files back into the repository
+        run: |
+          git config --local user.name "KagariSoft-dev "
+          git add .
+          git commit -m "🏗️ Files updated"
+      - name: Push changes # push the output folder to your repo
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          force: true
 
