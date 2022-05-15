@@ -1,0 +1,6 @@
+button,
+input[type="submit"],
+input[type="button"],
+.kg__button {
+  @extend %buttons;
+}

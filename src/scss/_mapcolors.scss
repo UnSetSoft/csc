@@ -1,0 +1,21 @@
+$colors: (
+  buttons: (
+    primary: #222,
+    secondary: #3d82b3, 
+    success: #1b9715,
+    warning: #bd740f,
+    danger: #da1d6c,
+  ),
+  textcolor: (
+    primary: #da1d6c,
+    secondary: #156197,
+    tertiary: #1b9715,
+    quaternary: #7e920d,
+    quinary: #971561,
+  ),
+);
+
+@function clr($base, $shade: base) {
+  $color: map-get(map-get($colors, $base), $shade);
+  @return $color;
+}

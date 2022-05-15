@@ -4,7 +4,7 @@
   "license": "MIT",
   "author": "Neyunse",
   "scripts": {
-    "start:min": "nodemon -e scss -x \"yarn build-css-min\"",
+    "start:min": "nodemon -e scss -x \"yarn build-css:min\"",
     "start": "nodemon -e scss -x \"yarn build-css\"",
     "build-css:min": "node-sass --include-path scss src/scss/common.scss dist/css/common.min.css --output-style compressed", 
     "build-css": "node-sass --include-path scss src/scss/common.scss dist/css/common.css"

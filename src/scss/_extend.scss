@@ -1,0 +1,128 @@
+/*Button CSS*/
+
+%buttons {
+  color: white;
+  padding: 11px;
+  min-width: max-content;
+  user-select: none;
+  cursor: map-get($cursors, pointer);
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  font-weight: bold;
+  line-height: 1.5;
+  text-align: center;
+  vertical-align: middle;
+  background: clr(buttons, primary);
+  border-radius: 0.25rem;
+  border: 0px;
+  transition: all 0.2s ease-in-out;
+  text-decoration: none; // if is link, the css button remove the underline
+  display: inline-block;
+  @include mq(mobile) {
+    padding: 7px;
+  }
+
+  &:lang(ja) {
+    font-family: $font-family-japanese;
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: map-get($cursors, not-allowed);
+  }
+
+  &:hover {
+    background-color: lighten(clr(buttons, primary), 9%);
+    color: white;
+  }
+
+  &.kg__btn {
+    &-block {
+      display: map-get($display, block);
+    }
+    &-active {
+      background-color: clr(buttons, activebtn);
+    }
+    &-primary {
+      background-color: clr(buttons, secondary);
+      &:hover {
+        background-color: lighten(clr(buttons, secondary), 9%);
+      }
+    }
+    &-success {
+      background-color: clr(buttons, success);
+      &:hover {
+        background-color: lighten(clr(buttons, success), 9%);
+      }
+    }
+    &-warning {
+      background-color: clr(buttons, warning);
+      &:hover {
+        background-color: lighten(clr(buttons, warning), 9%);
+      }
+    }
+    &-danger {
+      background-color: clr(buttons, danger);
+      &:hover {
+        background-color: lighten(clr(buttons, danger), 9%);
+      }
+    }
+
+    &-20 {
+      width: 20%;
+    }
+
+    &-30 {
+      width: 30%;
+    }
+
+    &-50 {
+      width: 50%;
+    }
+
+    &-100 {
+      width: 100%;
+      &-support {
+        @include mq(desktop) {
+          width: 232px;
+          height: 163px;
+        }
+      }
+    }
+  }
+}
+/*Text CSS*/
+%textType {
+  &.kg__text {
+    &-underline {
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+    &-primary {
+      color: clr(textcolor, primary);
+    }
+    &-bold {
+      font-weight: bold;
+    }
+    &-Baloo {
+      font-family: $font-family-Baloo;
+    }
+    &-block {
+      display: map-get($display, block);
+    }
+    &-vertical {
+      writing-mode: tb-rl;
+    }
+    &-p__0 {
+      padding: 0px;
+    }
+    &-m__0 {
+      margin: 0px;
+    }
+  }
+  &:lang(ja) {
+    font-family: $font-family-japanese;
+  }
+  padding: 3px;
+  margin-bottom: 0px;
+}

@@ -1,0 +1,38 @@
+$object-fit: (
+  "cover": cover,
+  "contain": contain,
+  "fill": fill,
+  "none": none,
+  "scale-down": scale-down,
+);
+
+$position: (
+  "absolute": absolute,
+  "fixed": fixed,
+  "relative": relative,
+  "static": static,
+  "sticky": sticky,
+);
+
+$display: (
+  "none": none,
+  "block": block,
+  "flex": flex,
+  "grid": grid,
+  "inline-block": inline-block,
+  "inline-flex": inline-flex,
+  "inline-grid": inline-grid,
+);
+$cursors: (
+  default: default,
+  pointer: pointer,
+  text: text,
+  wait: wait,
+  not-allowed: not-allowed,
+  move: move,
+  resize: resize,
+  crosshair: crosshair,
+  help: help,
+  no-drop: no-drop,
+  progress: progress,
+);
