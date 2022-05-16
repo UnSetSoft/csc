@@ -35,7 +35,6 @@
     "nodemon": "^2.0.16"
   },
   "files": [
-    "dist/css/*.css",
-    "src/scss/**/*.scss"
+    "dist/css/*.css"
   ]
 }
