@@ -1,0 +1,53 @@
+header {
+  background-color: rgb(227, 227, 227);
+  &.kg {
+    &-dark {
+      background-color: clr(background, primary);
+      color: clr(background, secondary);
+    }
+    &-sticky {
+      position: -webkit-sticky;
+      position: sticky;
+      top: 0;
+    }
+  }
+  .kg__nav {
+    width: 100vw;
+    padding: 15px;
+    display: flex;
+
+    &.kg {
+      &-space__between {
+        justify-content: space-between;
+      }
+      &-container {
+        @extend %container;
+      }
+    }
+
+    ul {
+      list-style: none;
+      display: flex;
+      li a {
+        text-decoration: none;
+        color: clr(textcolor, dark);
+        font-size: 1em;
+        font-weight: 500;
+        transition: all 0.2s ease-in-out;
+        &.kg{
+          &-dark {
+            color: clr(textcolor, default);
+            &:hover {
+              color: darken(clr(textcolor, default), 20%);
+            }
+          }
+        }
+        
+        &:hover {
+          color: darken(clr(textcolor, default),60%);
+          
+        }
+      }
+    }
+  }
+}

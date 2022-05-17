@@ -37,7 +37,7 @@
     color: white;
   }
 
-  &.kg__btn {
+  &.kg {
     &-block {
       display: map-get($display, block);
     }
@@ -85,7 +85,7 @@
 }
 /*Text CSS*/
 %textType {
-  &.kg__text {
+  &.kg {
     &-underline {
       text-decoration: underline;
       text-underline-offset: 3px;
@@ -114,4 +114,33 @@
   }
   padding: 3px;
   margin-bottom: 0px;
+}
+
+%container {
+  &.h {
+    &-100 {
+      height: 100vh;
+    }
+  }
+
+  &.kg {
+    &-expanded {
+      width: 100%;
+      padding-right: 15px;
+      padding-left: 15px;
+      margin-right: auto;
+      margin-left: auto;
+    }
+    &-dark {
+      background-color: clr(background, primary);
+      color: clr(background, secondary);
+    }
+  }
+
+  max-width: 100vw;
+  width: 960px;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
 }

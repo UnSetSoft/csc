@@ -1,6 +1,6 @@
 {
   "name": "kagaristyle",
-  "version": "1.0.14",
+  "version": "1.1.1-0",
   "contributors": [
     "KagariSoft",
     "Neyunse"
@@ -26,8 +26,9 @@
     "url": "git+https://github.com/KagariSoft/KagariCSS.git"
   },
   "scripts": {
-    "build:develop": "nodemon ./build.js -e js,scss -x",
-    "css:build": "node ./build.js"
+    "postinstall": "yarn css:build",
+    "css:watch": "nodemon -e scss -x \"yarn css:build\"",
+    "css:build": "node-sass --include-path scss src/scss/common.scss dist/css/common.min.css --output-style compressed"
   },
   "devDependencies": {
     "node-sass": "^7.0.1",
