@@ -1,17 +1,22 @@
 $colors: (
   buttons: (
     primary: #222,
-    secondary: #3d82b3, 
+    secondary: #3d82b3,
     success: #1b9715,
     warning: #bd740f,
     danger: #da1d6c,
   ),
   textcolor: (
+    default: #fafafa,
     primary: #da1d6c,
     secondary: #156197,
     tertiary: #1b9715,
     quaternary: #7e920d,
     quinary: #971561,
+  ),
+  background: (
+    primary: #2b2b2b,
+    secondary: #fafafa,
   ),
 );
 
