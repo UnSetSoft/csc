@@ -26,7 +26,7 @@
     "url": "git+https://github.com/KagariSoft/KagariCSS.git"
   },
   "scripts": {
-    "postinstall": "yarn css:build",
+    
     "css:watch": "nodemon -e scss -x \"yarn css:build\"",
     "css:build": "node-sass --include-path scss src/scss/common.scss dist/css/common.min.css --output-style compressed"
   },
