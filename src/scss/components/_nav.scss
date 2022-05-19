@@ -1,21 +1,27 @@
 header {
-  background-color: rgb(227, 227, 227);
-  &.kg {
-    &-dark {
-      background-color: clr(background, primary);
-      color: clr(background, secondary);
-    }
-    &-sticky {
-      position: -webkit-sticky;
-      position: sticky;
-      top: 0;
+  &.kg__header {
+    background-color: transparent;
+    z-index: 2;
+    position: static;
+
+    &.kg {
+      &-light {
+        background-color: rgb(227, 227, 227);
+      }
+      &-dark {
+        background-color: clr(background, primary);
+        $navDark: "true";
+      }
     }
   }
   .kg__nav {
     width: 100vw;
     padding: 15px;
     display: flex;
-
+    transition: all 0.3s ease-in-out;
+    @if $navDark == "true" {
+      background-color: #242424;
+    }
     &.kg {
       &-space__between {
         justify-content: space-between;
@@ -23,29 +29,29 @@ header {
       &-container {
         @extend %container;
       }
+      &-fixed {
+        position: fixed;
+      }
     }
 
     ul {
       list-style: none;
       display: flex;
+      justify-content: center;
+      align-items: center;
       li a {
         text-decoration: none;
-        color: clr(textcolor, dark);
+        @if $navDark == "true" {
+          color: clr(textcolor, default);
+        } @else {
+          color: clr(textcolor, dark);
+        }
         font-size: 1em;
         font-weight: 500;
         transition: all 0.2s ease-in-out;
-        &.kg{
-          &-dark {
-            color: clr(textcolor, default);
-            &:hover {
-              color: darken(clr(textcolor, default), 20%);
-            }
-          }
-        }
-        
+
         &:hover {
-          color: darken(clr(textcolor, default),60%);
-          
+          color: darken(clr(textcolor, default), 60%);
         }
       }
     }
