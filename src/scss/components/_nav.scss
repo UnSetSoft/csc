@@ -1,7 +1,7 @@
 header {
   &.kg__header {
     z-index: 2;
-    position: static;
+    width: 100vw;
     &.kg {
       &-light {
         background-color: clr(background, secondary);
@@ -12,6 +12,12 @@ header {
         & > .kg__navbar > ul > li > a {
           color: #fff;
         }
+      }
+      &-absolute {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
       }
     }
 
@@ -43,6 +49,7 @@ header {
           font-size: 1em;
           font-weight: 500;
           transition: all 0.2s ease-in-out;
+          text-transform: uppercase;
 
           &:hover {
             color: darken(clr(textcolor, default), 60%);
