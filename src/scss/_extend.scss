@@ -113,13 +113,15 @@
     &-m__0 {
       margin: 0px;
     }
+    &-uppercase{
+      text-transform: uppercase;
+    }
   }
   &:lang(ja) {
     font-family: $font-family-japanese;
   }
   padding: 3px;
   margin-bottom: 0px;
-  text-transform: uppercase;
 }
 
 %container {
