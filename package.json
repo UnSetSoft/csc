@@ -28,11 +28,16 @@
   },
   "scripts": {
     "css:watch": "nodemon -e scss -x \"yarn css:build\"",
-    "css:build": "node-sass --include-path scss src/scss/common.scss dist/css/common.min.css --output-style compressed"
+    "css:build": "node-sass --include-path scss src/scss/common.scss dist/css/common.min.css --output-style compressed",
+    "js:watch": "nodemon -e js -x \"yarn js:build\"",
+    "js:build": "uglifyjs src/js/main.js -o dist/js/common.min.js -c -m"
   },
   "devDependencies": {
+    "browserify": "^17.0.0",
+    "concurrently": "^7.2.2",
     "node-sass": "^7.0.1",
-    "nodemon": "^2.0.16"
+    "nodemon": "^2.0.16",
+    "uglify-js": "^3.16.1"
   },
   "files": [
     "dist/css/*.css"
@@ -40,5 +45,6 @@
   "description": "A Cascading Style Component",
   "directories": {
     "test": "test"
-  }
+  },
+  "dependencies": {}
 }
