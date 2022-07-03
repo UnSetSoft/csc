@@ -13,7 +13,8 @@
     "css",
     "front-end",
     "framework",
-    "web"
+    "web",
+    "(csc) Cascading style component"
   ],
   "sass": "src/scss/common.scss",
   "style": "dist/css/common.min.css",
