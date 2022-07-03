@@ -1,6 +1,6 @@
 {
-  "name": "csc",
-  "version": "1.1.8",
+  "name": "@kagarisoft/csc",
+  "version": "1.1.7",
   "contributors": [
     "KagariSoft",
     "Neyunse"
@@ -8,23 +8,23 @@
   "license": "MIT",
   "author": "Neyunse",
   "main": "style.js",
-  "homepage": "https://kagaricssdoc.netlify.app",
+  "homepage": "https://ClassStyle.netlify.app",
   "keywords": [
     "css",
     "front-end",
     "framework",
     "web",
-    "(csc) Cascading style component"
+    "Cascading style component"
   ],
   "sass": "src/scss/common.scss",
   "style": "dist/css/common.min.css",
   "module": "style.js",
   "bugs": {
-    "url": "https://github.com/KagariSoft/KagariCSS/issues"
+    "url": "https://github.com/KagariSoft/csc/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/KagariSoft/KagariCSS.git"
+    "url": "git+https://github.com/KagariSoft/csc.git"
   },
   "scripts": {
     "css:watch": "nodemon -e scss -x \"yarn css:build\"",
@@ -37,7 +37,7 @@
   "files": [
     "dist/css/*.css"
   ],
-  "description": "[![CSS (node-sass)](https://github.com/KagariSoft/KagariCSS/actions/workflows/compile.yml/badge.svg)](https://github.com/KagariSoft/KagariCSS/actions/workflows/compile.yml) [![kagaristyle Versions](https://badges.openbase.com/js/versions/kagaristyle.svg?token=M7zIF6JtAiMczqPDRxObXlWr7njOtv7RX3h1+RcSMgM=)](https://openbase.com/js/kagaristyle?utm_source=embedded&amp;utm_medium=badge&amp;utm_campaign=rate-badge) ![npm version](https://img.shields.io/npm/v/kagaristyle.svg?maxAge=3600) ![npm downloads](https://img.shields.io/npm/dm/kagaristyle.svg?maxAge=3600)",
+  "description": "A Cascading Style Component",
   "directories": {
     "test": "test"
   }
