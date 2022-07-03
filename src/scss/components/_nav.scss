@@ -41,6 +41,15 @@ header {
         }
       }
 
+      .menu__content {
+        display: none;
+        visibility: hidden;
+        @include mq(mobile) {
+          display: block;
+          visibility: visible;
+        }
+      }
+
       ul {
         list-style: none;
         display: flex;
