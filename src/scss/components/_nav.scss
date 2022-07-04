@@ -25,6 +25,9 @@ header {
       width: 100vw;
       padding: 24px;
       display: flex;
+      @include mq(mobile) {
+        flex-direction: column;
+      }
       transition: all 0.3s ease-in-out;
       &.kg {
         &-space__between {
@@ -38,11 +41,35 @@ header {
         }
       }
 
+      .menu__content {
+        display: none;
+        visibility: hidden;
+        @include mq(mobile) {
+          display: block;
+          visibility: visible;
+        }
+      }
+
       ul {
         list-style: none;
         display: flex;
         justify-content: center;
         align-items: center;
+        transition: all 0.2s ease-in-out;
+        @include mq(mobile) {
+          display: none;
+          flex-direction: column;
+          &.kg {
+            &-show__list {
+              display: flex;
+            }
+          }
+        }
+        li {
+          @include mq(mobile) {
+            margin-top: 1.2em;
+          }
+        }
         li a {
           text-decoration: none;
           color: #2b2b2b;
@@ -50,6 +77,9 @@ header {
           font-weight: 500;
           transition: all 0.2s ease-in-out;
           text-transform: uppercase;
+          @include mq(mobile) {
+            font-size: 1.2em;
+          }
 
           &:hover {
             color: darken(clr(textcolor, default), 60%);
