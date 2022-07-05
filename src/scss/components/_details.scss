@@ -1,0 +1,41 @@
+.kg__details {
+  font-size: 1rem;
+  width: 100%;
+  background: #ffffff;
+  border-radius: 8px;
+  position: map-get($position, relative);
+
+  cursor: map-get($cursors, pointer);
+  margin-bottom: 10px;
+
+  .kg__details__body {
+    border-top: 1px solid #e2e8f0;
+    cursor: default;
+    padding: 1em;
+    font-weight: 300;
+    line-height: 1.5;
+  }
+
+  .kg__details__header {
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 10px;
+    display: map-get($display, flex);
+    position: map-get($position, relative);
+
+    &::-webkit-details-marker {
+      display: map-get($display, none);
+    }
+
+    .icon-datalist {
+      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='feather feather-chevron-down'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+      display: block;
+      width: 24px;
+      height: 24px;
+      background-repeat: no-repeat;
+      transform: rotate(-90deg);
+      right: 5px;
+      position: map-get($position, absolute);
+    }
+  }
+}
