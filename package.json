@@ -38,7 +38,7 @@
     "node-sass": "^7.0.1",
     "nodemon": "^2.0.16",
     "np": "^7.6.2",
-    "uglify-js": "^3.16.1"
+    "uglify-js": "^3.16.2"
   },
   "files": [
     "dist/css/*.css",
