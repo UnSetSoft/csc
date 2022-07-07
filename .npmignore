@@ -13,4 +13,4 @@ npm-debug.log
 .github
 src
 build.js
-test
+index.html
