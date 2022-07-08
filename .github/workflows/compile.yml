@@ -55,10 +55,10 @@ jobs:
         with:
           node-version: "${{ env.NODE }}"
 
-      - name: Build JS with uglifyjs
+      - name: Build JS with uglify-js
         run: |
-          npx --package uglifyjs@latest uglifyjs --version
-          npx --package uglifyjs@latest uglifyjs src/js/main.js -o dist/js/common.min.js -c -m
+          npx --package uglify-js@latest uglify-js --version
+          npx --package uglify-js@latest uglify-js src/js/main.js -o dist/js/common.min.js -c -m
 
       - name: Commit files # transfer the new html files back into the repository
         run: |
