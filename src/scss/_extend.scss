@@ -125,39 +125,37 @@
 }
 /*Text CSS*/
 %textType {
-  .kg__text {
-    padding: 3px;
-    margin-bottom: 0px;
-    &.kg {
-      &-underline {
-        text-decoration: underline;
-        text-underline-offset: 3px;
-      }
-      &-primary {
-        color: clr(textcolor, primary);
-      }
-      &-bold {
-        font-weight: bold;
-      }
-      &-Baloo {
-        font-family: $font-family-Baloo;
-      }
-      &-vertical {
-        writing-mode: tb-rl;
-      }
-      &-p__0 {
-        padding: 0px;
-      }
-      &-m__0 {
-        margin: 0px;
-      }
-      &-uppercase {
-        text-transform: uppercase;
-      }
+  padding: 3px;
+  margin-bottom: 0px;
+  &.kg {
+    &-underline {
+      text-decoration: underline;
+      text-underline-offset: 3px;
     }
-    &:lang(ja) {
-      font-family: $font-family-japanese;
+    &-primary {
+      color: clr(textcolor, primary);
     }
+    &-bold {
+      font-weight: bold;
+    }
+    &-Baloo {
+      font-family: $font-family-Baloo;
+    }
+    &-vertical {
+      writing-mode: tb-rl;
+    }
+    &-p__0 {
+      padding: 0px;
+    }
+    &-m__0 {
+      margin: 0px;
+    }
+    &-uppercase {
+      text-transform: uppercase;
+    }
+  }
+  &:lang(ja) {
+    font-family: $font-family-japanese;
   }
 }
 
