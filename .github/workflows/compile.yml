@@ -57,6 +57,7 @@ jobs:
 
       - name: Build JS with uglify-js
         run: |
+          yarn install
           yarn js:build
 
       - name: Commit files # transfer the new html files back into the repository
