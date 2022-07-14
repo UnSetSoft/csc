@@ -1,209 +1,269 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@kagarisoft/csc@1.2.4/dist/css/common.min.css">
-</head>
-<style>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Example</title>
+    <link rel="stylesheet" href="./dist/css/common.min.css" />
+    <link rel="stylesheet" href="./src/css-dev/common.css" />
+  </head>
+  <style>
     .red {
-        background-color: red;
+      background-color: red;
     }
 
     .green {
-        background-color: green;
+      background-color: green;
     }
 
     .flex {
-        display: flex;
+      display: flex;
     }
-</style>
+  </style>
 
-<body>
+  <body>
     <header class="kg__header kg-dark">
-        <nav class="kg__navbar kg-space__between kg-container">
-            <div class="menu__content">
-                <button class="kg__button kg menu" data-togglemenu>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-            </div>
-            <ul data-menulist>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Products</a></li>
-                <li><a href="#">Contact</a></li>
-                <li><a href="#">About</a></li>
-            </ul>
-            <ul data-menulist>
-                <li><a href="#">Link</a></li>
-                <li><a href="#">Link</a></li>
-            </ul>
-        </nav>
+      <nav class="kg__navbar kg-space__between kg-container">
+        <div class="menu__content">
+          <button class="kg__button menu" data-togglemenu>
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+        <ul data-menulist>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Products</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">About</a></li>
+        </ul>
+        <ul data-menulist>
+          <li><a href="#">Link</a></li>
+          <li><a href="#">Link</a></li>
+        </ul>
+      </nav>
     </header>
     <div class="kg__container">
-        <section>
-            <h2 class="kg__text">Paragraph</h2>
+      <section>
+        <h2 class="kg__text">Paragraph</h2>
 
-            <h3 class="kg__text">Default Font</h3>
+        <h3 class="kg__text">Default Font</h3>
 
-            <p class="kg__text">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim illo adipisci, sequi, odit quibusdam
-                dolores
-                soluta porro maiores omnis voluptate temporibus magnam quod nostrum quisquam commodi laboriosam
-                exercitationem dolorum optio?
+        <p class="kg__text">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim illo
+          adipisci, sequi, odit quibusdam dolores soluta porro maiores omnis
+          voluptate temporibus magnam quod nostrum quisquam commodi laboriosam
+          exercitationem dolorum optio?
+        </p>
+
+        <h3>Baloo Font</h3>
+
+        <p class="kg__text kg-Baloo">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim illo
+          adipisci, sequi, odit quibusdam dolores soluta porro maiores omnis
+          voluptate temporibus magnam quod nostrum quisquam commodi laboriosam
+          exercitationem dolorum optio?
+        </p>
+
+        <h3 class="kg__text">Kosugi Maru Font</h3>
+
+        <p class="kg__text" lang="ja">プライマリ</p>
+
+        <h3 class="kg__text">Underline</h3>
+
+        <p>
+          <span class="kg__text kg-underline">Lorem Ipsum</span> is simply dummy
+          text of the printing and typesetting industry. Lorem Ipsum has been
+          the industry's standard dummy text ever since the 1500s, when an
+          unknown printer took a galley of type and scrambled it to make a type
+          specimen book. It has survived not only five centuries, but also the
+          leap into electronic typesetting, remaining essentially unchanged.
+        </p>
+
+        <h3>Bold</h3>
+
+        <p>
+          <span class="kg__text kg-bold">Lorem Ipsum</span> is simply dummy text
+          of the printing and typesetting industry. Lorem Ipsum has been the
+          industry's standard dummy text ever since the 1500s, when an unknown
+          printer took a galley of type and scrambled it to make a type specimen
+          book. It has survived not only five centuries, but also the leap into
+          electronic typesetting, remaining essentially unchanged.
+        </p>
+
+        <h3>Vertical text (JP Font)</h3>
+
+        <p class="kg__text kg-bold kg-underline">
+          To display the text side by side, use flex in the parent container
+        </p>
+
+        <div class="flex">
+          <p class="kg__text kg-vertical" lang="ja">
+            遠い遠い昔、中近東の遠い村のこと。
+          </p>
+          <p class="kg__text kg-vertical" lang="ja">
+            戦士は立ち上がり、自分の名誉と家族のために戦った。
+          </p>
+          <p class="kg__text kg-vertical" lang="ja">
+            伝説とされる英雄であり、偉大な戦士である。
+          </p>
+        </div>
+
+        <h3>marging and padding 0</h3>
+
+        <p class="kg__text kg-p__0 kg-m__0">HELLO WORLD</p>
+      </section>
+      <section>
+        <h2 class="kg__text">Heading</h2>
+        <ul>
+          <li>
+            <h1 class="kg__text">H1</h1>
+          </li>
+          <li>
+            <h2 class="kg__text">H2</h2>
+          </li>
+          <li>
+            <h3 class="kg__text">H3</h3>
+          </li>
+          <li>
+            <h4 class="kg__text">H4</h4>
+          </li>
+          <li>
+            <h5 class="kg__text">H5</h5>
+          </li>
+          <li>
+            <h6 class="kg__text">H6</h6>
+          </li>
+        </ul>
+      </section>
+      <section>
+        <h2 class="kg__text">Buttons</h2>
+
+        <ul>
+          <li><button class="kg__button">Default</button></li>
+          <li><button class="kg__button kg-primary">Primary</button></li>
+          <li><button class="kg__button kg-success">Success</button></li>
+          <li><button class="kg__button kg-warning">Warning</button></li>
+          <li><button class="kg__button kg-danger">Danger</button></li>
+        </ul>
+
+        <h3 class="kg__text">Disabled state</h3>
+        <ul>
+          <li><button class="kg__button" disabled>Default</button></li>
+          <li>
+            <button class="kg__button kg-primary" disabled>Primary</button>
+          </li>
+        </ul>
+        <h3 class="kg__text">Size state</h3>
+        <ul>
+          <li><button class="kg__button">Default</button></li>
+          <li><button class="kg__button kg-primary kg-20">Primary</button></li>
+          <li><button class="kg__button kg-success kg-30">Success</button></li>
+          <li><button class="kg__button kg-warning kg-50">Warning</button></li>
+          <li><button class="kg__button kg-danger kg-100">Danger</button></li>
+        </ul>
+      </section>
+
+      <section>
+        <br /><br />
+        <h2 class="kg__text">
+          Details <span class="versionadded">v1.2.5</span>
+        </h2>
+        <details class="kg__details" data-datalist>
+          <summary class="kg__details__header" data-summary>
+            Lorem ipsum
+            <i class="icon-datalist" data-icon-datalist></i>
+          </summary>
+          <div class="kg__details__body" data-content-summary>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias,
+              impedit distinctio porro fugiat iste maxime eius quaerat?
+              Consequuntur, hic quibusdam harum temporibus ad, nostrum
+              reiciendis, repellat tempore tempora tenetur dolorem!
             </p>
+          </div>
+        </details>
 
-            <h3>Baloo Font</h3>
-
-            <p class="kg__text kg-Baloo">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim illo adipisci, sequi, odit quibusdam
-                dolores
-                soluta porro maiores omnis voluptate temporibus magnam quod nostrum quisquam commodi laboriosam
-                exercitationem dolorum optio?
+        <details class="kg__details" data-datalist>
+          <summary class="kg__details__header" data-summary>
+            Lorem ipsum
+            <i class="icon-datalist" data-icon-datalist></i>
+          </summary>
+          <div class="kg__details__body" data-content-summary>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias,
+              impedit distinctio porro fugiat iste maxime eius quaerat?
+              Consequuntur, hic quibusdam harum temporibus ad, nostrum
+              reiciendis, repellat tempore tempora tenetur dolorem!
             </p>
+          </div>
+        </details>
+      </section>
 
-            <h3 class="kg__text">Kosugi Maru Font</h3>
+      <section>
+        <br /><br />
+        <h2 class="kg__text">
+          Alerts <span class="versionadded">v1.2.6</span>
+        </h2>
+        <div class="kg__alert" role="alert">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui
+            eligendi vel cumque delectus, asperiores doloribus iure similique
+            enim culpa, consequuntur illum consequatur facere, eos mollitia
+            reprehenderit excepturi corporis dolore velit.
+          </p>
+        </div>
 
-            <p class="kg__text" lang="ja">プライマリ</p>
+        <div class="kg__alert kg-primary" role="alert">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui
+            eligendi vel cumque delectus, asperiores doloribus iure similique
+            enim culpa, consequuntur illum consequatur facere, eos mollitia
+            reprehenderit excepturi corporis dolore velit.
+          </p>
+        </div>
 
-            <h3 class="kg__text">Underline</h3>
+        <div class="kg__alert kg-success" role="alert">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui
+            eligendi vel cumque delectus, asperiores doloribus iure similique
+            enim culpa, consequuntur illum consequatur facere, eos mollitia
+            reprehenderit excepturi corporis dolore velit.
+          </p>
+        </div>
 
-            <p><span class="kg__text kg-underline">Lorem Ipsum</span> is simply dummy text of the printing and
-                typesetting
-                industry.
-                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer
-                took a
-                galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,
-                but
-                also the leap into electronic typesetting, remaining essentially unchanged.</p>
+        <div class="kg__alert kg-warning" role="alert">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui
+            eligendi vel cumque delectus, asperiores doloribus iure similique
+            enim culpa, consequuntur illum consequatur facere, eos mollitia
+            reprehenderit excepturi corporis dolore velit.
+          </p>
+        </div>
 
-            <h3>Bold</h3>
-
-            <p><span class="kg__text kg-bold">Lorem Ipsum</span> is simply dummy text of the printing and typesetting
-                industry.
-                Lorem
-                Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
-                galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,
-                but
-                also the leap into electronic typesetting, remaining essentially unchanged.</p>
-
-            <h3>Vertical text (JP Font)</h3>
-
-            <p class="kg__text kg-bold kg-underline">To display the text side by side, use flex in the parent container
-            </p>
-
-            <div class="flex">
-                <p class="kg__text kg-vertical" lang="ja">遠い遠い昔、中近東の遠い村のこと。</p>
-                <p class="kg__text kg-vertical" lang="ja">戦士は立ち上がり、自分の名誉と家族のために戦った。</p>
-                <p class="kg__text kg-vertical" lang="ja">伝説とされる英雄であり、偉大な戦士である。</p>
-            </div>
-
-            <h3>marging and padding 0</h3>
-
-            <p class="kg__text kg-p__0 kg-m__0">HELLO WORLD</p>
-
-        </section>
-        <section>
-            <h2 class="kg__text">Heading</h2>
-            <ul>
-                <li>
-                    <h1 class="kg__text">H1</h1>
-                </li>
-                <li>
-                    <h2 class="kg__text">H2</h2>
-                </li>
-                <li>
-                    <h3 class="kg__text">H3</h3>
-                </li>
-                <li>
-                    <h4 class="kg__text">H4</h4>
-                </li>
-                <li>
-                    <h5 class="kg__text">H5</h5>
-                </li>
-                <li>
-                    <h6 class="kg__text">H6</h6>
-                </li>
-            </ul>
-        </section>
-        <section>
-            <h2 class="kg__text">Buttons</h2>
-
-            <ul>
-                <li><button class="kg__button">Default</button></li>
-                <li><button class="kg__button kg-primary">Primary</button></li>
-                <li><button class="kg__button kg-success">Success</button></li>
-                <li><button class="kg__button kg-warning">Warning</button></li>
-                <li><button class="kg__button kg-danger">Danger</button></li>
-            </ul>
-
-            <h3 class="kg__text">Disabled state</h3>
-            <ul>
-                <li><button class="kg__button" disabled>Default</button></li>
-                <li><button class="kg__button kg-primary" disabled>Primary</button></li>
-
-            </ul>
-            <h3 class="kg__text">Size state</h3>
-            <ul>
-                <li><button class="kg__button">Default</button></li>
-                <li><button class="kg__button kg-primary kg-20">Primary</button></li>
-                <li><button class="kg__button kg-success kg-30">Success</button></li>
-                <li><button class="kg__button kg-warning kg-50">Warning</button></li>
-                <li><button class="kg__button kg-danger kg-100">Danger</button></li>
-            </ul>
-        </section>
-
-        <section>
-            <br><br>
-            <h2 class="kg__text">Details</h2>
-            <details class="kg__details" data-datalist>
-                <summary class="kg__details__header" data-summary>
-                    Lorem ipsum
-                    <i class="icon-datalist" data-icon-datalist></i>
-                </summary>
-                <div class="kg__details__body" data-content-summary>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias, impedit distinctio porro fugiat
-                        iste maxime eius quaerat? Consequuntur, hic quibusdam harum temporibus ad, nostrum reiciendis,
-                        repellat tempore tempora tenetur dolorem!</p>
-                </div>
-            </details>
-
-            <details class="kg__details" data-datalist>
-                <summary class="kg__details__header" data-summary>
-                    Lorem ipsum
-                    <i class="icon-datalist" data-icon-datalist></i>
-                </summary>
-                <div class="kg__details__body" data-content-summary>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias, impedit distinctio porro fugiat
-                        iste maxime eius quaerat? Consequuntur, hic quibusdam harum temporibus ad, nostrum reiciendis,
-                        repellat tempore tempora tenetur dolorem!</p>
-                </div>
-            </details>
-
-
-        </section>
-
-
-
-
+        <div class="kg__alert kg-danger" role="alert">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui
+            eligendi vel cumque delectus, asperiores doloribus iure similique
+            enim culpa, consequuntur illum consequatur facere, eos mollitia
+            reprehenderit excepturi corporis dolore velit.
+          </p>
+        </div>
+      </section>
     </div>
     <div>
-        <section>
-            <h2 class="kg__text">Layout</h2>
-            <div class="kg__container red">
-                <p>container</p>
-            </div>
+      <section>
+        <h2 class="kg__text">Layout</h2>
+        <div class="kg__container red">
+          <p>container</p>
+        </div>
 
-            <div class="kg__container kg-expanded green">
-                <p>Expanded container</p>
-            </div>
-        </section>
+        <div class="kg__container kg-expanded green">
+          <p>Expanded container</p>
+        </div>
+      </section>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/@kagarisoft/csc@1.2.4/dist/js/common.min.js"></script>
-</body>
-
+    <script src="./dist/js/common.min.js"></script>
+  </body>
 </html>
