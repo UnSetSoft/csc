@@ -89,6 +89,7 @@ header {
         justify-content: center;
         align-items: center;
         transition: all 0.2s ease-in-out;
+        gap: 5px;
         @include mq(mobile) {
           display: none;
           flex-direction: column;

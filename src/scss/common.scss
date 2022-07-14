@@ -1,4 +1,4 @@
-﻿$version: "1.2.5";
+﻿$version: "1.2.6";
 
 /*!
 * KagariStyle 
@@ -25,6 +25,7 @@
 @import "./components/buttons.scss";
 @import "./components/nav.scss";
 @import "./components/details.scss";
+@import "./components/alerts.scss";
 /*Typography*/
 @import "./content/typografy.scss";
 /*Layout*/
