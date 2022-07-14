@@ -2,6 +2,7 @@
 
 %buttons {
   width: 127px;
+  min-width: 100px;
   height: fit-content;
 
   border-radius: 29px;
@@ -12,11 +13,10 @@
   user-select: none;
   cursor: map-get($cursors, pointer);
   color: white;
-  padding: 11px;
+  padding: 9px;
   -webkit-user-select: none;
   -moz-user-select: none;
   font-weight: bold;
-  line-height: 1.5;
   background: #222;
   border: 0px;
   transition: all 0.2s ease-in-out;
