@@ -5,6 +5,9 @@ header {
     &.kg {
       &-light {
         background-color: clr(background, secondary);
+        & > .kg__navbar > ul > li > a {
+          color: #2b2b2b;
+        }
       }
       &-dark {
         background-color: clr(background, primary);
@@ -106,7 +109,7 @@ header {
         }
         li a {
           text-decoration: none;
-          color: #2b2b2b;
+          
           font-size: 1em;
           font-weight: 500;
           transition: all 0.2s ease-in-out;
