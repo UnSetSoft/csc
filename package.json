@@ -18,8 +18,7 @@
   ],
   "sass": "src/scss/common.scss",
   "style": "dist/css/common.min.css",
-  "module": "dist/react.js",
-  "type": "module",
+  "module": "style.js",
   "bugs": {
     "url": "https://github.com/KagariSoft/csc/issues"
   },
@@ -32,52 +31,26 @@
     "css:build": "node-sass --include-path scss src/scss/common.scss dist/css/common.min.css --output-style compressed",
     "js:watch": "nodemon -e js -x \"yarn js:build\"",
     "js:build": "uglifyjs src/js/main.js -o dist/js/common.min.js -c -m",
-    "react:build": "babel src/lib --out-dir dist --copy-files",
-    "react:start": "react-scripts start",
-    "np:next": "np --any-branch --branch react",
     "np": "np --branch dev"
   },
   "devDependencies": {
-    "@babel/cli": "^7.13.14",
-    "@babel/core": "^7.13.14",
-    "@babel/preset-env": "^7.13.12",
     "browserify": "^17.0.0",
     "concurrently": "^7.2.2",
     "node-sass": "^7.0.1",
     "nodemon": "^2.0.19",
     "np": "^7.6.2",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-scripts": "4.0.3",
     "uglify-js": "^3.16.2"
   },
   "files": [
-    "dist"
+    "dist/css/*.css",
+    "dist/js/*.js"
   ],
   "description": "A Cascading Style Component",
   "directories": {
     "test": "test"
   },
-  "dependencies": {
-    "@babel/polyfill": "^7.12.1",
-    "@testing-library/jest-dom": "^5.11.4",
-    "@testing-library/react": "^11.1.0",
-    "@testing-library/user-event": "^12.1.10",
-    "core-js": "^3.23.5"
-  },
+  "dependencies": {},
   "publishConfig": {
     "registry": "https://registry.npmjs.org"
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
   }
 }
