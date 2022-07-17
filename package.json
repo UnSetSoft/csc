@@ -55,7 +55,7 @@
     "dist/css/*.css",
     "dist/js/*.js",
     "dist/react/*.js",
-    "react.js"
+    "react"
   ],
   "description": "A Cascading Style Component",
   "directories": {
