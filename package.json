@@ -19,6 +19,7 @@
   "sass": "src/scss/common.scss",
   "style": "dist/css/common.min.css",
   "module": "react.js",
+  "type": "module",
   "bugs": {
     "url": "https://github.com/KagariSoft/csc/issues"
   },
