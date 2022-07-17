@@ -52,7 +52,9 @@
   },
   "files": [
     "dist/css/*.css",
-    "dist/js/*.js"
+    "dist/js/*.js",
+    "dist/react/*.js",
+    "react.js"
   ],
   "description": "A Cascading Style Component",
   "directories": {
