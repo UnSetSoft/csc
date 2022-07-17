@@ -18,7 +18,7 @@
   ],
   "sass": "src/scss/common.scss",
   "style": "dist/css/common.min.css",
-  "module": "style.js",
+  "module": "react.js",
   "bugs": {
     "url": "https://github.com/KagariSoft/csc/issues"
   },
@@ -64,7 +64,8 @@
     "@babel/polyfill": "^7.12.1",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
-    "@testing-library/user-event": "^12.1.10"
+    "@testing-library/user-event": "^12.1.10",
+    "core-js": "^3.23.5"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org"
