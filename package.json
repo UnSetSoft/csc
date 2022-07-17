@@ -18,7 +18,7 @@
   ],
   "sass": "src/scss/common.scss",
   "style": "dist/css/common.min.css",
-  "module": "react.js",
+  "module": "react/index.js",
   "type": "module",
   "bugs": {
     "url": "https://github.com/KagariSoft/csc/issues"
@@ -32,7 +32,7 @@
     "css:build": "node-sass --include-path scss src/scss/common.scss dist/css/common.min.css --output-style compressed",
     "js:watch": "nodemon -e js -x \"yarn js:build\"",
     "js:build": "uglifyjs src/js/main.js -o dist/js/common.min.js -c -m",
-    "react:build": "babel src/lib --out-dir dist --copy-files",
+    "react:build": "babel src/lib --out-dir ./ --copy-files",
     "react:start": "react-scripts start",
     "np:next": "np --any-branch --branch react",
     "np": "np --branch dev"
