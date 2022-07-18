@@ -49,7 +49,9 @@
   "directories": {
     "test": "test"
   },
-  "dependencies": {},
+  "dependencies": {
+    "@kagarisoft/csc-react": "^1.2.9"
+  },
   "publishConfig": {
     "registry": "https://registry.npmjs.org"
   }
