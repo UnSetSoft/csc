@@ -1506,7 +1506,7 @@
     "@jridgewell/resolve-uri" "^3.0.3"
     "@jridgewell/sourcemap-codec" "^1.4.10"
 
-"@kagarisoft/csc-react@^1.2.9":
+"@kagarisoft/csc-react@latest":
   version "1.2.9"
   resolved "https://registry.yarnpkg.com/@kagarisoft/csc-react/-/csc-react-1.2.9.tgz#876c191a3046163f5a7a9cbb8f962d11716dd9bd"
   integrity sha512-bnVUdPWNC8KbQ4odjoSrDWwNLYHPY5ZjSfDIbjkxQnGEfv2erBjuUShlnoHVPu+nyL6rhnh7vEChvdVyKw94oA==
