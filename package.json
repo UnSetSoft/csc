@@ -35,7 +35,7 @@
   },
   "devDependencies": {
     "browserify": "^17.0.0",
-    "concurrently": "^7.2.2",
+    "concurrently": "^7.3.0",
     "node-sass": "^7.0.1",
     "nodemon": "^2.0.19",
     "np": "^7.6.2",
