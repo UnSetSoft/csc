@@ -1,8 +1,8 @@
 on:
   push:
-    branches: [ master ]
+    branches: [master]
   pull_request:
-    branches: [ master ]
+    branches: [master]
 
 env:
   DATE: $(date +%FT%TZ)
@@ -38,33 +38,21 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           force: true
-      
-      - name: Clone repository
-        uses: actions/checkout@v3
-        with:
-          persist-credentials: false # otherwise, the token used is the GITHUB_TOKEN, instead of your personal access token.
-          fetch-depth: 0 # otherwise, there would be errors pushing refs to the destination repository.
-      - name: Set up Node.js
-        uses: actions/setup-node@v3
+
+      - name: Checkout
+        uses: actions/checkout@v2.1.1
+      - name: node
+        uses: actions/setup-node@v2.4.2
         with:
           node-version: "${{ env.NODE }}"
 
-      - name: Cancel Previous Redundant Builds
-        uses: styfle/cancel-workflow-action@0.6.0
-        with:
-          access_token: ${{ github.token }}
-      - uses: actions/checkout@v2
-        with:
-          fetch-depth: 0
-          persist-credentials: false
-      - uses: actions/setup-node@v2
-        with:
-          node-version: 18
-          registry-url: 'https://registry.npmjs.org'
-      - uses: browser-actions/setup-chrome@latest
-      - run: npx @s-ui/ci release
+      - name: Publish CSC
+        run: npm publish --access public
+        working-directory: ./packages/csc
         env:
-          GITHUB_EMAIL: dev@kagarisoft.com
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          GITHUB_USER: KagariSoft-dev
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN}}
+      - name: Publish CSC React
+        run: npm publish --access public
+        working-directory: ./packages/csc-react
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN}}
