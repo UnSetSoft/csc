@@ -29,7 +29,12 @@ jobs:
 
       - name: Building JavaScript
 
-        run: npx uglifyjs@latest uglifyjs packages/csc/src/js/main.js -o packages/csc/dist/js/common.min.js -c -m
+        run: |
+          npm i
+          npm ci
+          npm run js:build
+
+        working-directory: ./packages/csc
 
       - name: Install dependencies
         run: npm install
