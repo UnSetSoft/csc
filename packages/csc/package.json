@@ -8,6 +8,8 @@
   "license": "MIT",
   "author": "Neyunse",
   "main": "style.js",
+  "private": false,
+  "access": "public",
   "homepage": "https://ClassStyle.netlify.app",
   "keywords": [
     "css",
