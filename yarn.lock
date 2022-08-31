@@ -1567,7 +1567,7 @@
 
 "@kagarisoft/csc-react@file:/home/runner/work/csc/csc/packages/csc-react":
   "resolved" "file:packages/csc-react"
-  "version" "1.3.6"
+  "version" "1.3.7"
   dependencies:
     "@kagarisoft/csc" "latest"
 
@@ -1578,7 +1578,7 @@
 
 "@kagarisoft/csc@file:/home/runner/work/csc/csc/packages/csc":
   "resolved" "file:packages/csc"
-  "version" "1.3.6"
+  "version" "1.3.7"
 
 "@kagarisoft/csc@latest":
   "integrity" "sha512-B2xbqijGIR2TcWa6lD3CHInTL7MiskUxcO39y+8rsC9p4PtYwaI2F/f6EUhOYOHpgygLjQGD22s9ISiUrH17aw=="
