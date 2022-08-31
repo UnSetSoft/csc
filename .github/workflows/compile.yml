@@ -8,8 +8,7 @@ env:
   DATE: $(date +%FT%TZ)
 
 jobs:
-
-  css:
+  build:
     runs-on: ubuntu-latest
 
     steps:
@@ -38,10 +37,7 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           force: true
-  js:
-    runs-on: ubuntu-latest
-
-    steps:
+      
       - name: Clone repository
         uses: actions/checkout@v3
         with:
@@ -67,29 +63,23 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           force: true
 
-  build:
-    runs-on: ubuntu-latest
 
-    steps:
-    - name: Cancel Previous Redundant Builds
-      uses: styfle/cancel-workflow-action@0.6.0
-      with:
-        access_token: ${{ github.token }}
-    - uses: actions/checkout@v2
-      with:
-        fetch-depth: 0
-        persist-credentials: false
-    - uses: actions/setup-node@v2
-      with:
-        node-version: 18
-        registry-url: 'https://registry.npmjs.org'
-    - uses: browser-actions/setup-chrome@latest
-    - run: sudo apt-get install xvfb
-    - run: npm install --no-save --no-fund --no-audit --legacy-peer-deps
-    - run: npx -y ultra-runner --raw --recursive prepublishOnly &>/dev/null
-    - run: npx @s-ui/ci release
-      env:
-        GITHUB_EMAIL: dev@kagarisoft.com
-        GITHUB_TOKEN: ${{ secrets.GB_TOKEN }}
-        GITHUB_USER: KagariSoft-dev
-        NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+      - name: Cancel Previous Redundant Builds
+        uses: styfle/cancel-workflow-action@0.6.0
+        with:
+          access_token: ${{ github.token }}
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/setup-node@v2
+        with:
+          node-version: 18
+          registry-url: 'https://registry.npmjs.org'
+      - uses: browser-actions/setup-chrome@latest
+      - run: npx @s-ui/ci release
+        env:
+          GITHUB_EMAIL: dev@kagarisoft.com
+          GITHUB_TOKEN: ${{ secrets.GB_TOKEN }}
+          GITHUB_USER: KagariSoft-dev
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
