@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "CSC MonoRepository",
   "main": "index.js",
-  "private": true,
+  "private": false,
   "contributors": [
     "KagariSoft",
     "Neyunse"
