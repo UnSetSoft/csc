@@ -16,6 +16,8 @@ Object.defineProperty(exports, "Details", {
   }
 });
 
+require("@kagarisoft/csc/dist/css/common.min.css");
+
 var _Button = _interopRequireDefault(require("./components/Button"));
 
 var _details = _interopRequireDefault(require("./components/details"));
