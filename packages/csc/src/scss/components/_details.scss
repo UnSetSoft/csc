@@ -14,6 +14,9 @@
     padding: 1em;
     font-weight: 300;
     line-height: 1.5;
+    p {
+      color: black;
+    }
   }
 
   .kg__details__header {
@@ -22,6 +25,7 @@
     padding: 10px;
     display: map-get($display, flex);
     position: map-get($position, relative);
+    color: black;
 
     &::-webkit-details-marker {
       display: map-get($display, none);
