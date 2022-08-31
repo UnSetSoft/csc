@@ -1,0 +1,72 @@
+name: Compile
+
+on:
+  push:
+    branches-ignore:
+      - "dependabot/**"
+  pull_request:
+  workflow_dispatch:
+
+env:
+  FORCE_COLOR: 2
+  NODE: 16
+
+jobs:
+  css:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Clone repository
+        uses: actions/checkout@v3
+        with:
+          persist-credentials: false # otherwise, the token used is the GITHUB_TOKEN, instead of your personal access token.
+          fetch-depth: 0 # otherwise, there would be errors pushing refs to the destination repository.
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: "${{ env.NODE }}"
+
+      - name: Build CSS with node-sass
+        run: |
+          npx --package node-sass@latest node-sass --version
+          npx --package node-sass@latest node-sass --include-path scss src/scss/common.scss dist/css/common.min.css --output-style compressed
+
+      - name: Commit files # transfer the new html files back into the repository
+        run: |
+          git config --local user.name "KagariSoft-dev "
+          git add .
+          git commit -m "🏗️ Files updated" -a
+      - name: Push changes # push the output folder to your repo
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          force: true
+  js:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Clone repository
+        uses: actions/checkout@v3
+        with:
+          persist-credentials: false # otherwise, the token used is the GITHUB_TOKEN, instead of your personal access token.
+          fetch-depth: 0 # otherwise, there would be errors pushing refs to the destination repository.
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: "${{ env.NODE }}"
+
+      - name: Build JS with uglify-js
+        run: |
+          yarn install
+          yarn js:build
+
+      - name: Commit files # transfer the new html files back into the repository
+        run: |
+          git config --local user.name "KagariSoft-dev "
+          git add .
+          git commit -m "🏗️ Files updated" -a
+      - name: Push changes # push the output folder to your repo
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          force: true

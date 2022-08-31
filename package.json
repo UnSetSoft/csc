@@ -1,0 +1,32 @@
+{
+  "name": "csc-mono",
+  "version": "1.0.0",
+  "description": "CSC MonoRepository",
+  "main": "index.js",
+  "private": true,
+  "contributors": [
+    "KagariSoft",
+    "Neyunse"
+  ],
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "commit": "sui-mono commit",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KagariSoft/csc.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KagariSoft/csc/issues"
+  },
+  "homepage": "https://github.com/KagariSoft/csc#readme",
+  "dependencies": {
+    "@s-ui/mono": "^2.31.0"
+  }
+}

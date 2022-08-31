@@ -1,0 +1,180 @@
+/*Button CSS*/
+
+%buttons {
+  width: 127px;
+  min-width: fit-content;
+  height: fit-content;
+  border-radius: 29px;
+  font-size: 1rem;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  user-select: none;
+  cursor: map-get($cursors, pointer);
+  color: white;
+  padding: 9px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  font-weight: bold;
+  background: #222;
+  border: 0px;
+  transition: all 0.2s ease-in-out;
+
+  @include mq(mobile) {
+    padding: 7px;
+  }
+
+  &:lang(ja) {
+    font-family: $font-family-japanese;
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: map-get($cursors, not-allowed);
+  }
+
+  &:hover {
+    background-color: lighten(clr(buttons, primary), 9%);
+    color: white;
+  }
+
+  &.kg {
+    &-no__decoration {
+      text-decoration: none;
+    }
+    &-block {
+      display: map-get($display, block);
+    }
+
+    &-inline__block {
+      display: map-get($display, inline-block);
+    }
+
+    &-primary {
+      background-color: clr(buttons, secondary);
+      &:hover {
+        background-color: lighten(clr(buttons, secondary), 9%);
+      }
+    }
+    &-success {
+      background-color: clr(buttons, success);
+      &:hover {
+        background-color: lighten(clr(buttons, success), 9%);
+      }
+    }
+    &-warning {
+      background-color: clr(buttons, warning);
+      &:hover {
+        background-color: lighten(clr(buttons, warning), 9%);
+      }
+    }
+    &-danger {
+      background-color: clr(buttons, danger);
+      &:hover {
+        background-color: lighten(clr(buttons, danger), 9%);
+      }
+    }
+
+    &-20 {
+      width: 20%;
+    }
+
+    &-30 {
+      width: 30%;
+    }
+
+    &-50 {
+      width: 50%;
+    }
+
+    &-100 {
+      width: 100%;
+    }
+  }
+}
+/*Text CSS*/
+%textType {
+  padding: 3px;
+  margin-bottom: 0px;
+  &.kg {
+    &-underline {
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+    &-primary {
+      color: clr(textcolor, primary);
+    }
+    &-bold {
+      font-weight: bold;
+    }
+    &-Baloo {
+      font-family: $font-family-Baloo;
+    }
+    &-vertical {
+      writing-mode: tb-rl;
+    }
+    &-p__0 {
+      padding: 0px;
+    }
+    &-m__0 {
+      margin: 0px;
+    }
+    &-uppercase {
+      text-transform: uppercase;
+    }
+  }
+  &:lang(ja) {
+    font-family: $font-family-japanese;
+  }
+}
+
+%container {
+  &.h {
+    &-100 {
+      height: 100vh;
+    }
+  }
+
+  &.kg {
+    &-expanded {
+      width: 100%;
+      padding-right: 15px;
+      padding-left: 15px;
+      margin-right: auto;
+      margin-left: auto;
+    }
+  }
+
+  max-width: 100vw;
+  width: 960px;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+%Alert {
+  width: 100%;
+  padding: 10px;
+  background: #f9f9f9;
+  border-radius: 10px;
+  color: #444;
+  &.kg {
+    &-primary {
+      background-color: clr(buttons, secondary);
+      color: #f9f9f9;
+    }
+    &-success {
+      background-color: clr(buttons, success);
+      color: #f9f9f9;
+    }
+    &-warning {
+      background-color: clr(buttons, warning);
+      color: #f9f9f9;
+    }
+    &-danger {
+      background-color: clr(buttons, danger);
+      color: #f9f9f9;
+    }
+  }
+}

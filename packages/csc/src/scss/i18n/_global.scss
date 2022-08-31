@@ -1,0 +1,10 @@
+@import url(https://fonts.googleapis.com/css?family=Baloo);
+@import url("https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;700&display=swap");
+
+// Fonts and Defaults
+$font-family-Nunito: "Nunito", sans-serif;
+$font-family-Maven-Pro: "Maven Pro", sans-serif;
+$font-family-Baloo: "Baloo", "Arial Narrow", Arial, sans-serif;
+// Default font-family
+$font-family: $font-family-Maven-Pro;

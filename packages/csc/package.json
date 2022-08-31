@@ -1,0 +1,58 @@
+{
+  "name": "@kagarisoft/csc",
+  "version": "1.2.10",
+  "contributors": [
+    "KagariSoft",
+    "Neyunse"
+  ],
+  "license": "MIT",
+  "author": "Neyunse",
+  "main": "style.js",
+  "homepage": "https://ClassStyle.netlify.app",
+  "keywords": [
+    "css",
+    "front-end",
+    "framework",
+    "web",
+    "Cascading style component"
+  ],
+  "sass": "src/scss/common.scss",
+  "style": "dist/css/common.min.css",
+  "module": "style.js",
+  "bugs": {
+    "url": "https://github.com/KagariSoft/csc/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KagariSoft/csc.git"
+  },
+  "scripts": {
+    "css:watch": "nodemon -e scss -x \"yarn css:build\"",
+    "css:build": "node-sass --include-path scss src/scss/common.scss dist/css/common.min.css --output-style compressed",
+    "js:watch": "nodemon -e js -x \"yarn js:build\"",
+    "js:build": "uglifyjs src/js/main.js -o dist/js/common.min.js -c -m",
+    "np": "np --branch dev"
+  },
+  "devDependencies": {
+    "browserify": "^17.0.0",
+    "concurrently": "^7.2.2",
+    "node-sass": "^7.0.1",
+    "nodemon": "^2.0.19",
+    "np": "^7.6.2",
+    "uglify-js": "^3.16.2"
+  },
+  "files": [
+    "dist/css/*.css",
+    "dist/js/*.js"
+  ],
+  "description": "A Cascading Style Component",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "@kagarisoft/csc-react": "latest"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org"
+  }
+}
