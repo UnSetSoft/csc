@@ -65,6 +65,6 @@ jobs:
       - run: npx @s-ui/ci release
         env:
           GITHUB_EMAIL: dev@kagarisoft.com
-          GITHUB_TOKEN: ${{ secrets.GB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GITHUB_USER: KagariSoft-dev
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
