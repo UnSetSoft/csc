@@ -10,6 +10,7 @@
   ],
   "license": "MIT",
   "author": "Neyunse",
+  "access": "public",
   "homepage": "https://ClassStyle.netlify.app",
   "files": [
     "dist",
