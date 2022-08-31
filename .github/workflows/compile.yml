@@ -24,6 +24,7 @@ jobs:
 
       - name: Building CSS & JavaScript
         run: |
+          npm install
           npx --package node-sass@latest node-sass --version
           npx --package node-sass@latest node-sass --include-path scss packages/csc/src/scss/common.scss packages/csc/dist/css/common.min.css --output-style compressed
           npx --package uglify-js@latest uglifyjs packages/csc/src/js/main.js -o packages/csc/dist/js/common.min.js -c -m
@@ -52,7 +53,9 @@ jobs:
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN}}
       - name: Publish CSC React
-        run: npm publish --access public
+        run: |
+          npm adduser
+          npm publish --access public
         working-directory: ./packages/csc-react
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN}}
