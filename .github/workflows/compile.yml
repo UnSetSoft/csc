@@ -1,17 +1,14 @@
-name: Compile
-
 on:
   push:
-    branches-ignore:
-      - "dependabot/**"
+    branches: [ master ]
   pull_request:
-  workflow_dispatch:
+    branches: [ master ]
 
 env:
-  FORCE_COLOR: 2
-  NODE: 16
+  DATE: $(date +%FT%TZ)
 
 jobs:
+
   css:
     runs-on: ubuntu-latest
 
@@ -29,7 +26,7 @@ jobs:
       - name: Build CSS with node-sass
         run: |
           npx --package node-sass@latest node-sass --version
-          npx --package node-sass@latest node-sass --include-path scss src/scss/common.scss dist/css/common.min.css --output-style compressed
+          npx --package node-sass@latest node-sass --include-path scss packages/csc/src/scss/common.scss dist/css/common.min.css --output-style compressed
 
       - name: Commit files # transfer the new html files back into the repository
         run: |
@@ -57,8 +54,7 @@ jobs:
 
       - name: Build JS with uglify-js
         run: |
-          yarn install
-          yarn js:build
+          npx --package uglify-js@latest uglifyjs packages/csc/src/js/main.js -o packages/csc/dist/js/common.min.js -c -m
 
       - name: Commit files # transfer the new html files back into the repository
         run: |
@@ -70,3 +66,30 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           force: true
+
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Cancel Previous Redundant Builds
+      uses: styfle/cancel-workflow-action@0.6.0
+      with:
+        access_token: ${{ secrets.GB_TOKEN }}
+    - uses: actions/checkout@v2
+      with:
+        fetch-depth: 0
+        persist-credentials: false
+    - uses: actions/setup-node@v2
+      with:
+        node-version: 18
+        registry-url: 'https://registry.npmjs.org'
+    - uses: browser-actions/setup-chrome@latest
+    - run: sudo apt-get install xvfb
+    - run: npm install --no-save --no-fund --no-audit --legacy-peer-deps
+    - run: npx -y ultra-runner --raw --recursive prepublishOnly &>/dev/null
+    - run: npx @s-ui/ci release
+      env:
+        GITHUB_EMAIL: dev@kagarisoft.com
+        GITHUB_TOKEN: ${{ secrets.GB_TOKEN }}
+        GITHUB_USER: KagariSoft-dev
+        NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
