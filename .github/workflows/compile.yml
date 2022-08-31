@@ -22,22 +22,25 @@ jobs:
         with:
           node-version: "${{ env.NODE }}"
 
-      - name: Building CSS
+      - name: Building CSS and JavaScript
         run: |
           npx --package node-sass@latest node-sass --version
           npx --package node-sass@latest node-sass --include-path scss packages/csc/src/scss/common.scss packages/csc/dist/css/common.min.css --output-style compressed
 
-      - name: Building JS
-        working-directory: ./packages/csc
+          npx uglifyjs@latest uglifyjs packages/csc/src/js/main.js -o packages/csc/dist/js/common.min.js -c -m
+
+      - name: Building React
         run: |
           npm install
-          npm run js:build
+          npm run build
+        working-directory: ./packages/csc-react
 
       - name: Commit files # transfer the new html files back into the repository
         run: |
           git config --local user.name "KagariSoft-dev "
           git add .
           git commit -m "🏗️ Files updated" -a
+        working-directory: ./
       - name: Push changes # push the output folder to your repo
         uses: ad-m/github-push-action@master
         with:
