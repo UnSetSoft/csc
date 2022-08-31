@@ -1,6 +1,6 @@
 {
   "name": "@kagarisoft/csc",
-  "version": "1.2.10",
+  "version": "1.2.13",
   "contributors": [
     "KagariSoft",
     "Neyunse"
@@ -50,9 +50,6 @@
   "description": "A Cascading Style Component",
   "directories": {
     "test": "test"
-  },
-  "dependencies": {
-    "@kagarisoft/csc-react": "latest"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org"
