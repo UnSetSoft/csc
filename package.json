@@ -12,8 +12,9 @@
     "packages/*"
   ],
   "scripts": {
-    "commit": "sui-mono commit",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "sui:commit": "sui-mono commit",
+    "sui:check": "sui-mono check",
+    "sui:release": "sui-mono release"
   },
   "repository": {
     "type": "git",
