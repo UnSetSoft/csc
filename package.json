@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "CSC MonoRepository",
   "main": "index.js",
-  "private": false,
+  "private": true,
   "contributors": [
     "KagariSoft",
     "Neyunse"
@@ -29,5 +29,13 @@
   "homepage": "https://github.com/KagariSoft/csc#readme",
   "dependencies": {
     "@s-ui/mono": "^2.31.0"
+  },
+  "config": {
+    "sui-mono": {
+      "access": "public"
+    },
+    "validate-commit-msg": {
+      "types": "@s-ui/mono/src/types"
+    }
   }
 }
