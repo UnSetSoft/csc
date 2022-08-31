@@ -55,7 +55,6 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           force: true
-        working-directory: ./
 
       - name: Checkout
         uses: actions/checkout@v3
