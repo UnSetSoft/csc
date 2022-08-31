@@ -2,7 +2,7 @@
  * CSC (Cascading style component)
  * Author: Jorge Maxiliano Toledo
  * Type: SCSS/CSS Framework
- * Version: 1.3.8
+ * Version: 1.3.9
  * GitHub: https://github.com/KagariSoft/csc
  */
 

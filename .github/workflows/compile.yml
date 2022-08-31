@@ -26,12 +26,12 @@ jobs:
         run: |
           npx --package node-sass@latest node-sass --version
           npx --package node-sass@latest node-sass --include-path scss packages/csc/src/scss/common.scss packages/csc/dist/css/common.min.css --output-style compressed
-          
+
       - name: Building JS
         working-directory: ./packages/csc
         run: |
           npm install
-          npm js:build
+          npm run js:build
 
       - name: Commit files # transfer the new html files back into the repository
         run: |
