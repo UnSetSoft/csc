@@ -31,7 +31,9 @@
     "type": "git",
     "url": "git+https://github.com/KagariSoft/csc-react.git"
   },
-  "dependencies": {},
+  "dependencies": {
+    "@kagarisoft/csc": "latest"
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "babel src/lib --out-dir dist --copy-files",
