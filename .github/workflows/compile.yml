@@ -51,11 +51,27 @@ jobs:
         with:
           name: react-github-actions-build
           path: build
+          
+      - name: Commit files # transfer the new html files back into the repository
+        run: |
+          git config --local user.name "KagariSoft-dev "
+          git add .
+          git commit -m "🏗️ Files updated" -a
+      - name: Push changes # push the output folder to your repo
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          force: true
 
   publish:
     runs-on: ubuntu-latest
     needs: build
     steps:
+      - name: Clone repository
+        uses: actions/checkout@v3
+        with:
+          persist-credentials: false # otherwise, the token used is the GITHUB_TOKEN, instead of your personal access token.
+          fetch-depth: 0 # otherwise, there would be errors pushing refs to the destination repository.
       - name: node
         uses: actions/setup-node@v3
         with:
@@ -77,17 +93,3 @@ jobs:
         working-directory: ./packages/csc-react
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN}}
-  commit:
-    runs-on: ubuntu-latest
-    needs: publish
-    steps:
-      - name: Commit files # transfer the new html files back into the repository
-        run: |
-          git config --local user.name "KagariSoft-dev "
-          git add .
-          git commit -m "🏗️ Files updated" -a
-      - name: Push changes # push the output folder to your repo
-        uses: ad-m/github-push-action@master
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          force: true
