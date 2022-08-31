@@ -46,16 +46,20 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: "${{ env.NODE }}"
+          registry-url: "https://registry.npmjs.org"
 
       - name: Publish CSC
-        run: npm publish --access public
+        run: |
+          npm ci
+          npm publish
         working-directory: ./packages/csc
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN}}
+
       - name: Publish CSC React
         run: |
-          npm adduser
-          npm publish --access public
+          npm ci
+          npm publish
         working-directory: ./packages/csc-react
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN}}
