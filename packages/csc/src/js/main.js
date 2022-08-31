@@ -1,10 +1,10 @@
 /*!
-* CSC (Cascading style component)
-* Author: Jorge Maxiliano Toledo
-* Type: SCSS/CSS Framework
-* Version: 1.3.3
-* GitHub: https://github.com/KagariSoft/csc
-*/
+ * CSC (Cascading style component)
+ * Author: Jorge Maxiliano Toledo
+ * Type: SCSS/CSS Framework
+ * Version: 1.3.4
+ * GitHub: https://github.com/KagariSoft/csc
+ */
 
 document
   .querySelector("[data-togglemenu]")
