@@ -34,12 +34,12 @@
     "np": "np --branch dev"
   },
   "devDependencies": {
-    "browserify": "^17.0.0",
-    "concurrently": "^7.2.2",
-    "node-sass": "^7.0.1",
-    "nodemon": "^2.0.19",
-    "np": "^7.6.2",
-    "uglify-js": "^3.16.2"
+    "browserify": "latest",
+    "concurrently": "latest",
+    "node-sass": "latest",
+    "nodemon": "latest",
+    "np": "latest",
+    "uglify-js": "latest"
   },
   "files": [
     "dist/css/*.css",
