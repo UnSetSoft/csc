@@ -51,11 +51,15 @@ jobs:
         with:
           name: react-github-actions-build
           path: build
+      - name: Auth Machine
+        run: npm adduser
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN}}
 
       - name: Publish CSC
         run: |
           npm ci
-          npm publish
+          npm publish --access public
         working-directory: ./packages/csc
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN}}
@@ -63,7 +67,7 @@ jobs:
       - name: Publish CSC React
         run: |
           npm ci
-          npm publish
+          npm publish --access public
         working-directory: ./packages/csc-react
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN}}
