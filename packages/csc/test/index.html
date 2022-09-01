@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Example</title>
+    <link rel="stylesheet" href="../../csc/dist/css/common.min.css" />
+  </head>
+  <body>
+    <div class="kg__image__container" data-cards></div>
+
+    <script>
+      const csc = document.querySelector("[data-cards]");
+      for (let i = 0; i < 30; i++) {
+        csc.innerHTML += `
+          <img class="kg__image kg br-10 mw kg-mha" src="https://placehold.jp/3d4070/ffffff/254x374.png" alt="">
+        `;
+      }
+    </script>
+  </body>
+</html>
