@@ -47,11 +47,11 @@ jobs:
           npm run build
         working-directory: ./packages/csc-react
 
-      - name: Share artifact inside workflow
-        uses: actions/upload-artifact@v3
+      - name: Setup Node
+        uses: actions/setup-node@v2
         with:
-          name: react-github-actions-build
-          path: build
+          node-version: "${{ env.NODE }}"
+          registry-url: 'https://registry.npmjs.org'
 
       - name: Publish CSC
         run: |
