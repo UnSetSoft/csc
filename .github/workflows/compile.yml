@@ -1,3 +1,4 @@
+name: CI
 on:
   push:
     branches: [master]
@@ -51,10 +52,6 @@ jobs:
         with:
           name: react-github-actions-build
           path: build
-      - name: Auth Machine
-        run: npm adduser
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN}}
 
       - name: Publish CSC
         run: |
