@@ -1,7 +1,6 @@
 ---
 title: Containers
 ---
-
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@kagarisoft/csc/dist/css/common.min.css"/>
 
 The default container is `960` pixels wide and has a padding of `15` pixels on the sides. By default, all content will be displayed in the center.
