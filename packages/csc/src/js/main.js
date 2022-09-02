@@ -2,17 +2,22 @@
  * CSC (Cascading style component)
  * Author: Jorge Maxiliano Toledo
  * Type: SCSS/CSS Framework
- * Version: 1.4.0
+ * Version: 1.4.1
  * GitHub: https://github.com/KagariSoft/csc
  */
 
-document
-  .querySelector("[data-togglemenu]")
-  .addEventListener("click", function () {
+const $ = (selector) => document.querySelector(selector);
+const $All = (selector) => document.querySelectorAll(selector);
+
+const menu = $("[data-togglemenu]");
+
+if (menu) {
+  menu.addEventListener("click", function () {
     document.querySelectorAll("[data-menulist]").forEach((item) => {
       item.classList.toggle("kg-show__list");
     });
   });
+}
 
 //Credits: https://codepen.io/chriscoyier/pen/XWNqxyY
 class Accordion {
@@ -141,6 +146,45 @@ class Accordion {
   }
 }
 
-document.querySelectorAll("[data-datalist]").forEach((el) => {
-  new Accordion(el);
-});
+const DataList = $All("[data-datalist]");
+if (DataList) {
+  DataList.forEach((el) => {
+    new Accordion(el);
+  });
+}
+
+// 3D Image animation
+const Container3D = $All("[data-3d]");
+
+if (Container3D) {
+  Container3D.forEach((el) => {
+    const { width, height } = el.getBoundingClientRect();
+
+    const halfWidth = width / 2;
+
+    const halfHeight = height / 2;
+
+    el.addEventListener("mousemove", (e) => {
+      const { offsetX, offsetY } = e;
+      const rotationX = ((offsetX - halfWidth) / halfWidth) * 10;
+      const rotationY = ((offsetY - halfHeight) / halfHeight) * 10;
+
+      const children = el?.children[0];
+      console.log(children);
+
+      if (children) {
+        children.style.transition = "none";
+        children.style.transform = `rotateX(${rotationX}deg) rotateY(${rotationY}deg)`;
+      }
+    });
+
+    el.addEventListener("mouseleave", (e) => {
+      const children = el?.children[0];
+
+      if (children) {
+        children.style.transition = "transform .5s ease-in-out";
+        children.style.transform = `rotateX(0deg) rotateY(0deg)`;
+      }
+    });
+  });
+}
