@@ -1,9 +1,18 @@
+import React, { useState } from 'react';
 import { Button, Details, Alert, Image } from './lib'
 
 function App() {
+  const [Count, setCount] = useState(0)
+
+  const button = () => {
+    setCount(Count + 1)
+  }
+
   return <div className="App">
 
-    <Button label="Hello world" />
+    <Button label="Hello world" customClass="" styleArg="success" onClickButton={button} />
+
+    {Count}
 
     <Details title="hello" body="hello" />
 
@@ -18,3 +27,10 @@ function App() {
 }
 
 export default App;
+
+
+const style = {
+  customButton: {
+    color: '#000',
+  }
+}
