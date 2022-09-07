@@ -9,10 +9,8 @@ const Button = (props) => {
       const customClass = props.customClass ? props.customClass : '';
       const onClickButton = props.onClickButton ? props.onClickButton : null;
 
-      console.log(customClass)
-
       return (
-            <button className={[`kg__button ${styleArg}${width}`, customClass].join(' ')} onClick={onClickButton}>{props.label}</button>
+            <button className={[`kg__button ${styleArg} ${width}`, customClass].join(' ')} onClick={onClickButton}>{props.label}</button>
       )
 }
 
