@@ -14,9 +14,8 @@ const Button = props => {
   const width = props.width ? "kg-".concat(props.width) : '';
   const customClass = props.customClass ? props.customClass : '';
   const onClickButton = props.onClickButton ? props.onClickButton : null;
-  console.log(customClass);
   return /*#__PURE__*/_react.default.createElement("button", {
-    className: ["kg__button ".concat(styleArg).concat(width), customClass].join(' '),
+    className: ["kg__button ".concat(styleArg, " ").concat(width), customClass].join(' '),
     onClick: onClickButton
   }, props.label);
 };
