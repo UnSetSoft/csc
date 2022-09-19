@@ -1,6 +1,6 @@
 {
   "name": "@kagarisoft/csc-react",
-  "version": "1.4.3",
+  "version": "1.4.4",
   "main": "dist/index.js",
   "module": "dist/index.js",
   "contributors": [
@@ -30,6 +30,8 @@
     "url": "git+https://github.com/KagariSoft/csc-react.git"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.2.0",
+    "@fortawesome/react-fontawesome": "^0.2.0",
     "@kagarisoft/csc": "latest"
   },
   "scripts": {
@@ -65,6 +67,7 @@
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.3.0",
     "@testing-library/user-event": "^13.5.0",
+    "@fortawesome/free-solid-svg-icons": "^6.2.0",
     "np": "^7.6.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
