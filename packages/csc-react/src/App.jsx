@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { Button, Details, Alert, Image } from './lib'
-
 function App() {
   const [Count, setCount] = useState(0)
 
@@ -10,7 +9,7 @@ function App() {
 
   return <div className="App">
 
-    <Button label="Hello world" customClass="" styleArg="success" onClickButton={button} />
+    <Button label="Hello world" customClass="aaaa" styleArg="success" onClickButton={button} />
 
     {Count}
 
