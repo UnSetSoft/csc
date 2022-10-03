@@ -1,6 +1,6 @@
 {
   "name": "@kagarisoft/csc-react",
-  "version": "1.5.2-next",
+  "version": "1.5.2",
   "main": "dist/index.js",
   "module": "dist/index.js",
   "contributors": [

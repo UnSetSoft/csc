@@ -1,6 +1,6 @@
 {
   "name": "csc-mono",
-  "version": "1.5.2-next",
+  "version": "1.5.2",
   "description": "CSC MonoRepository",
   "private": true,
   "contributors": [
