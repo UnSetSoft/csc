@@ -87,6 +87,7 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           force: true
+          branch: ${{ github.ref }}
 
       - name: Release 📦
         uses: softprops/action-gh-release@v1
