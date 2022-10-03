@@ -26,7 +26,8 @@ jobs:
           node-version: "${{ env.NODE }}"
 
       - name: Upgrade Interactive
-      - run: |
+
+        run: |
           yarn upgrade-interactive --latest
 
       - name: Commit files # transfer the new html files back into the repository
