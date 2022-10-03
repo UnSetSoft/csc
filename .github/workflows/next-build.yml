@@ -28,6 +28,9 @@ jobs:
       - name: Resolve version
         id: vars
         run: echo "::set-output name=tag_name::$(git describe --tags --abbrev=0)"
+      - name: get-npm-version
+        id: package-version
+        uses: martinbeentjes/npm-get-version-action@maintain
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
@@ -84,11 +87,8 @@ jobs:
           git config --local user.name "KagariSoft-dev "
           git add .
           git commit -m "🏗️ Files updated" -a
-      - name: Push changes # push the output folder to your repo
-        uses: ad-m/github-push-action@master
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          force: true
+          git tag v${{ steps.package-version.outputs.current-version}}
+          git push origin v${{ steps.package-version.outputs.current-version}}
 
       - name: Release Next 📦
         uses: technote-space/release-github-actions@v6
