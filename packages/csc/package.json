@@ -30,8 +30,7 @@
     "css:watch": "nodemon -e scss -x \"yarn css:build\"",
     "css:build": "node-sass --include-path scss src/scss/common.scss dist/css/common.min.css --output-style compressed",
     "js:watch": "nodemon -e js -x \"yarn js:build\"",
-    "js:build": "uglifyjs src/js/main.js -o dist/js/common.min.js -c -m",
-    "np": "np --branch dev"
+    "js:build": "uglifyjs src/js/main.js -o dist/js/common.min.js -c -m"
   },
   "devDependencies": {
     "browserify": "latest",
