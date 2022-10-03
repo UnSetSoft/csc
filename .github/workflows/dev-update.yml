@@ -25,6 +25,9 @@ jobs:
         with:
           node-version: "${{ env.NODE }}"
 
+      - name: Install packages
+        run: yarn install
+
       - name: Upgrade Interactive
 
         run: |
