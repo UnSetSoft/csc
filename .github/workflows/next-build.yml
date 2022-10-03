@@ -91,8 +91,4 @@ jobs:
           force: true
 
       - name: Release Next 📦
-        uses: softprops/action-gh-release@v1
-        with:
-          draft: false
-          prerelease: true
-          tag_name: ${{ steps.vars.outputs.tag_name }}
+        uses: technote-space/release-github-actions@v6
