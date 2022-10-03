@@ -4,7 +4,7 @@ on:
   push:
     branches: [next]
     tags:
-      - "v*.*.*-n"
+      - "v*-next"
 
 env:
   DATE: $(date +%FT%TZ)
