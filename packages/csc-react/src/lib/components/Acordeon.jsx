@@ -21,7 +21,7 @@ const Acordeon = ({ children, title, icon, iconColor, className }) => {
             <div className={className ? `kg__acordeon ${className}` : "kg__acordeon"} onClick={OpenAcordeon}>
                   <div className='kg__acordeon__title'>
                         <span>{icon && <FontAwesomeIcon style={style} icon={i} />} {title}</span>
-                        <div className={open ? `kg__acordeon__title__icon kg__acordeon__title__icon__open` : `kg__acordeon__title__icon kg__acordeon__title__icon__default`}><FontAwesomeIcon icon={faSortDown} /></div>
+                        <div className={open ? `kg__acordeon__title__icon kg-open` : `kg__acordeon__title__icon kg-default`}><FontAwesomeIcon icon={faSortDown} /></div>
                   </div>
                   {open ? (
                         <div className='kg__acordeon__body'>
