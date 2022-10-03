@@ -93,6 +93,6 @@ jobs:
       - name: Release Next 📦
         uses: softprops/action-gh-release@v1
         with:
-          draft: true
+          draft: false
           prerelease: true
           tag_name: ${{ steps.vars.outputs.tag_name }}
