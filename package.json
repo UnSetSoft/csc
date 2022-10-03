@@ -1,8 +1,7 @@
 {
   "name": "csc-mono",
-  "version": "1.0.0",
+  "version": "0.0.0",
   "description": "CSC MonoRepository",
-  "main": "index.js",
   "private": true,
   "contributors": [
     "KagariSoft",
@@ -11,31 +10,12 @@
   "workspaces": [
     "packages/*"
   ],
-  "scripts": {
-    "sui:commit": "sui-mono commit",
-    "sui:check": "sui-mono check",
-    "sui:release": "sui-mono release"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/KagariSoft/csc.git"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "bugs": {
     "url": "https://github.com/KagariSoft/csc/issues"
   },
-  "homepage": "https://github.com/KagariSoft/csc#readme",
-  "dependencies": {
-    "@s-ui/mono": "^2.31.0"
-  },
-  "config": {
-    "sui-mono": {
-      "access": "public"
-    },
-    "validate-commit-msg": {
-      "types": "@s-ui/mono/src/types"
-    }
-  }
+  "homepage": "https://github.com/KagariSoft/csc#readme"
 }

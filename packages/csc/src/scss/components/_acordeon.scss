@@ -1,0 +1,43 @@
+.kg__acordeon {
+  background-color: #eee;
+  padding: 10px;
+  overflow: hidden;
+  border-radius: 10px;
+  color: rgba(63, 63, 63, 0.76);
+  cursor: pointer;
+  user-select: none;
+  transition: max-height 0.15s ease-out;
+  .kg__acordeon__title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    span {
+      font-weight: bold;
+    }
+    .kg__acordeon__title__icon {
+      transition: all 0.3s ease-in-out;
+      font-size: 20px;
+      margin-right: 10px;
+      display: flex;
+      justify-content: center;
+      &.kg {
+        &-default {
+          transform: rotate(-90deg);
+        }
+        &-open {
+          transform: rotate(0deg);
+          position: relative;
+          top: -4px;
+        }
+      }
+    }
+  }
+
+  .kg__acordeon__body {
+    border-top: 1px solid rgba(158, 158, 158, 0.171);
+    margin-top: 10px;
+    .kg__acordeon__body__container {
+      margin-top: 10px;
+    }
+  }
+}

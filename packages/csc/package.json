@@ -1,6 +1,6 @@
 {
   "name": "@kagarisoft/csc",
-  "version": "1.4.5",
+  "version": "1.5.0-next",
   "contributors": [
     "KagariSoft",
     "Neyunse"
@@ -30,15 +30,13 @@
     "css:watch": "nodemon -e scss -x \"yarn css:build\"",
     "css:build": "node-sass --include-path scss src/scss/common.scss dist/css/common.min.css --output-style compressed",
     "js:watch": "nodemon -e js -x \"yarn js:build\"",
-    "js:build": "uglifyjs src/js/main.js -o dist/js/common.min.js -c -m",
-    "np": "np --branch dev"
+    "js:build": "uglifyjs src/js/main.js -o dist/js/common.min.js -c -m"
   },
   "devDependencies": {
     "browserify": "latest",
     "concurrently": "latest",
     "node-sass": "latest",
     "nodemon": "latest",
-    "np": "latest",
     "uglify-js": "latest"
   },
   "files": [
