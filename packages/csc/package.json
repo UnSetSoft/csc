@@ -38,7 +38,6 @@
     "concurrently": "latest",
     "node-sass": "latest",
     "nodemon": "latest",
-    "np": "latest",
     "uglify-js": "latest"
   },
   "files": [
