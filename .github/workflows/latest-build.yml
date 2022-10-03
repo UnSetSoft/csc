@@ -3,8 +3,6 @@ on:
   workflow_dispatch:
   push:
     branches: [master]
-    tags:
-      - "v*.*.*"
 
 env:
   DATE: $(date +%FT%TZ)
@@ -23,11 +21,10 @@ jobs:
           repository: ${{ github.event.pull_request.head.repo.full_name }}
           ref: "master"
 
-      - run: git fetch --tags -f
+      - name: get-npm-version
+        id: package-version
+        uses: martinbeentjes/npm-get-version-action@maintain
 
-      - name: Resolve version
-        id: vars
-        run: echo "::set-output name=tag_name::$(git describe --tags --abbrev=0)"
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
@@ -84,6 +81,7 @@ jobs:
           git config --local user.name "KagariSoft-dev "
           git add .
           git commit -m "🏗️ Files updated" -a
+          git tag v${{ steps.package-version.outputs.current-version}}
       - name: Push changes # push the output folder to your repo
         uses: ad-m/github-push-action@master
         with:
@@ -94,4 +92,4 @@ jobs:
         uses: softprops/action-gh-release@v1
         with:
           draft: false
-          tag_name: ${{ steps.vars.outputs.tag_name }}
+          tag_name: v${{ steps.package-version.outputs.current-version}}
