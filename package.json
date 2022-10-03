@@ -1,6 +1,6 @@
 {
   "name": "csc-mono",
-  "version": "1.0.0",
+  "version": "1.4.5",
   "description": "CSC MonoRepository",
   "main": "index.js",
   "private": true,
