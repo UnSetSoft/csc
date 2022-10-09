@@ -12,8 +12,8 @@ function App() {
 
   return <div className="App">
 
-    <Container className="test" >
-      <Button label="Hello world" customClass="aaaa" styleArg="success" onClickButton={button} />
+    <Container className="test" expanded isLite>
+      <Button anchor="eee" decorationOff label="Hello world" success onClickButton={button} />
 
       {Count}
 
@@ -35,7 +35,13 @@ function App() {
 
       <Image
         src="https://placehold.jp/3d4070/ffffff/500x150.png"
-        alt="hey!" />
+        alt="hey!"
+        anchor="eee"
+        thumbnail
+        responsive
+        border
+
+      />
     </Container>
   </div>;
 }

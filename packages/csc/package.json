@@ -1,11 +1,11 @@
 {
   "name": "@kagarisoft/csc",
-  "version": "1.5.2",
+  "version": "1.5.5",
   "contributors": [
     "KagariSoft",
     "Neyunse"
   ],
-  "license": "MIT",
+  "license": "KPL 3.0",
   "author": "Neyunse",
   "main": "style.js",
   "homepage": "https://ClassStyle.netlify.app",

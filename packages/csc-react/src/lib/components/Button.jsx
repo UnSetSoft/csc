@@ -1,24 +1,72 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import classNames from "classnames";
+import Alert from './Alerts'
+const Button = ({
+      className,
+      label,
+      onClickButton,
+      icon,
+      success,
+      primary,
+      warning,
+      danger,
+      decorationOff,
+      block,
+      inline,
+      anchor
+}) => {
 
-const Button = (props) => {
+      if (anchor) {
+            if (!anchor.length > 0) return (
+                  <Alert type="danger">
+                        [Image] Anchor prop need url string
+                  </Alert>
+            )
+      }
 
-      const styleArg = props.styleArg ? `kg-${props.styleArg}` : '';
-      const width = props.width ? `kg-${props.width}` : ''
-      const customClass = props.customClass ? props.customClass : '';
-      const onClickButton = props.onClickButton ? props.onClickButton : null;
 
-      const icon = props.icon ? props.icon : null;
+      const buttonSettings = {
+            "success": success,
+            "no__decoration": decorationOff,
+            "block": block,
+            "inline__block": inline,
+            "primary": primary,
+            "warning": warning,
+            "danger": danger,
+      }
+
+      if (icon) {
+            return (
+                  <>
+                        {anchor ? (
+                              <a href={anchor} className={classNames('kg__button', "kr", className, buttonSettings)}>
+                                    <span><FontAwesomeIcon icon={icon} /> {label}</span>
+                              </a>
+                        ) :
+                              (
+                                    <button className={classNames('kg__button', "kr", className, buttonSettings)} onClick={onClickButton}>
+                                          <span>{label}</span>
+                                    </button>
+                              )
+                        }
+                  </>
+            )
+      }
 
       return (
             <>
-                  {icon ?
-                        <button className={[`kg__button ${styleArg} ${width}`, customClass].join(' ')} onClick={onClickButton}>
-                              <span><FontAwesomeIcon icon={icon} /> {props.label}</span>
-                        </button> :
-                        <button className={[`kg__button ${styleArg} ${width}`, customClass].join(' ')} onClick={onClickButton}><span>{props.label}</span></button>
+                  {anchor ? (
+                        <a href={anchor} className={classNames('kg__button', "kr", className, buttonSettings)}>
+                              <span>{label}</span>
+                        </a>
+                  ) :
+                        (
+                              <button className={classNames('kg__button', "kr", className, buttonSettings)} onClick={onClickButton}>
+                                    <span>{label}</span>
+                              </button>
+                        )
                   }
-
             </>
       )
 }
