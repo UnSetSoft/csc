@@ -1,13 +1,13 @@
 {
   "name": "@kagarisoft/csc-react",
-  "version": "1.5.2-next",
+  "version": "1.5.5-next",
   "main": "dist/index.js",
   "module": "dist/index.js",
   "contributors": [
     "KagariSoft",
     "Neyunse"
   ],
-  "license": "MIT",
+  "license": "KPL 3.0",
   "author": "Neyunse",
   "homepage": "https://ClassStyle.netlify.app",
   "files": [
@@ -30,9 +30,12 @@
     "url": "git+https://github.com/KagariSoft/csc-react.git"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "6.2.0",
-    "@fortawesome/react-fontawesome": "0.2.0",
-    "@kagarisoft/csc": "latest"
+    "@fortawesome/fontawesome-svg-core": "latest",
+    "@fortawesome/free-brands-svg-icons": "latest",
+    "@fortawesome/free-solid-svg-icons": "latest",
+    "@fortawesome/react-fontawesome": "latest",
+    "@kagarisoft/csc": "latest",
+    "classnames": "^2.3.2"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -67,7 +70,6 @@
     "@testing-library/jest-dom": "5.16.5",
     "@testing-library/react": "13.4.0",
     "@testing-library/user-event": "14.4.3",
-    "@fortawesome/free-solid-svg-icons": "6.2.0",
     "np": "7.6.2",
     "react": "18.2.0",
     "react-dom": "18.2.0",

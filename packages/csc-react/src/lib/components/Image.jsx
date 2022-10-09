@@ -1,39 +1,44 @@
 import React from 'react';
-
-const Image = (props) => {
-
-      const thumbnail = props.thumbnail ? 'kg-thumbnail' : '';
-      const responsive = props.responsive ? 'kg-mha' : '';
-      const border = props.border === 20 || props.border === 10 ? `br-${props.border}` : '';
-      const movile = props.mobile ? 'mw' : null;
-      const width = props.width ? `w-${props.width}` : '';
-
-      const customClass = props.customClass ? props.customClass : '';
-      const src = props.src.length > 0 ? props.src : null;
-      const alt = props.alt.length > 0 ? props.alt : null;
-
-      const anchor = props.anchor ? props.anchor : false;
-
+import classNames from "classnames";
+import Alert from './Alerts'
+const Image = ({ className, src, alt, anchor, border, thumbnail, responsive }) => {
       if (!src) {
-            return console.error(`This component need src=""`);
+            return (
+                  <Alert type="danger">
+                        [Image] This component need src="" for show the image
+                  </Alert>
+            )
       } else if (!alt) {
-            return console.error(`This component need alt=""`);
+            return (
+                  <Alert type="danger">
+                        [Image] This component need alt="" for show the image
+                  </Alert>
+            )
+      } else if (anchor) {
+            if (!anchor.length > 0) return (
+                  <Alert type="danger">
+                        [Image] Anchor prop need url string
+                  </Alert>
+            )
+      }
+
+      const imageSettings = {
+            'kg-thumbnail': thumbnail,
+            'kg-mha': responsive,
+            'kg-br': border
       }
 
 
 
       return (
             <>
-                  {anchor.length > 0 ? (
+                  {anchor ? (
                         <a href={anchor}>
-                              <img className={
-                                    `kg__image kg ${thumbnail} ${responsive} ${border} ${movile} ${width} ${customClass}`
-                              } src={src} alt={alt} loading='lazy' />
+
+                              <img className={classNames('kg__image', className, imageSettings)} src={src} alt={alt} loading='lazy' />
                         </a>
                   ) : (
-                        <img className={
-                              `kg__image kg ${thumbnail} ${responsive} ${border} ${movile} ${width} ${customClass}`
-                        } src={src} alt={alt} loading='lazy' />
+                        <img className={classNames('kg__image', className, imageSettings)} src={src} alt={alt} loading='lazy' />
                   )}
             </>
       )

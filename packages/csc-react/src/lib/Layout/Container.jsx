@@ -1,14 +1,18 @@
 import React from 'react';
+import classNames from "classnames";
+const Container = ({ children, hmax, expanded, className, isLite }) => {
 
-const Container = ({ children, hmax, expanded, className }) => {
-
-      const h = hmax ? 'h-100' : '';
-      const e = expanded ? 'kg-expanded' : '';
-      const c = className ? className : '';
+      const containerSettings = {
+            'h-100': hmax,
+            'kg-expanded': expanded,
+            'kg__e-lite': isLite
+      }
       return (
-            <div class={`kg__container ${e} ${h} ${c}`}>
-                  {children}
-            </div>
+            <>
+                  <div className={classNames('kg__container', className, containerSettings)}>
+                        {children}
+                  </div>
+            </>
       )
 }
 
