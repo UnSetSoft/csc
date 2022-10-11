@@ -23,6 +23,6 @@
   },
   "homepage": "https://github.com/KagariSoft/csc#readme",
   "dependencies": {
-    "@kagarisoft/gmvu-cli": "1.0.1-beta"
+    "@kagarisoft/gmvu-cli": "1.0.4"
   }
 }
