@@ -60,7 +60,9 @@ const Button = _ref => {
       disabled: isDisabled,
       className: (0, _classnames.default)('kg__button', "kr", className, buttonSettings),
       onClick: onClickButton
-    }, /*#__PURE__*/_react.default.createElement("span", null, label)));
+    }, /*#__PURE__*/_react.default.createElement("span", null, /*#__PURE__*/_react.default.createElement(_reactFontawesome.FontAwesomeIcon, {
+      icon: icon
+    }), " ", label)));
   }
 
   return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, anchor ? /*#__PURE__*/_react.default.createElement("a", {
