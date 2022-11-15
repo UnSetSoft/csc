@@ -49,7 +49,7 @@ const Button = ({
                         ) :
                               (
                                     <button disabled={isDisabled} className={classNames('kg__button', "kr", className, buttonSettings)} onClick={onClickButton}>
-                                          <span>{label}</span>
+                                          <span><FontAwesomeIcon icon={icon} /> {label}</span>
                                     </button>
                               )
                         }
