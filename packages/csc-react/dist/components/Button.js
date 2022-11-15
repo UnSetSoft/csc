@@ -28,8 +28,10 @@ const Button = _ref => {
     decorationOff,
     block,
     inline,
-    anchor
+    anchor,
+    disabled
   } = _ref;
+  const isDisabled = disabled ? true : false;
 
   if (anchor) {
     if (!anchor.length > 0) return /*#__PURE__*/_react.default.createElement(_Alerts.default, {
@@ -50,10 +52,12 @@ const Button = _ref => {
   if (icon) {
     return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, anchor ? /*#__PURE__*/_react.default.createElement("a", {
       href: anchor,
-      className: (0, _classnames.default)('kg__button', "kr", className, buttonSettings)
+      className: (0, _classnames.default)('kg__button', "kr", className, buttonSettings),
+      disabled: isDisabled
     }, /*#__PURE__*/_react.default.createElement("span", null, /*#__PURE__*/_react.default.createElement(_reactFontawesome.FontAwesomeIcon, {
       icon: icon
     }), " ", label)) : /*#__PURE__*/_react.default.createElement("button", {
+      disabled: isDisabled,
       className: (0, _classnames.default)('kg__button', "kr", className, buttonSettings),
       onClick: onClickButton
     }, /*#__PURE__*/_react.default.createElement("span", null, label)));
@@ -61,8 +65,10 @@ const Button = _ref => {
 
   return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, anchor ? /*#__PURE__*/_react.default.createElement("a", {
     href: anchor,
-    className: (0, _classnames.default)('kg__button', "kr", className, buttonSettings)
+    className: (0, _classnames.default)('kg__button', "kr", className, buttonSettings),
+    disabled: isDisabled
   }, /*#__PURE__*/_react.default.createElement("span", null, label)) : /*#__PURE__*/_react.default.createElement("button", {
+    disabled: isDisabled,
     className: (0, _classnames.default)('kg__button', "kr", className, buttonSettings),
     onClick: onClickButton
   }, /*#__PURE__*/_react.default.createElement("span", null, label)));
