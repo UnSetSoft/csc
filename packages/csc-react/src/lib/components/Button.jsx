@@ -14,8 +14,11 @@ const Button = ({
       decorationOff,
       block,
       inline,
-      anchor
+      anchor,
+      disabled
 }) => {
+
+      const isDisabled = disabled ? true : false;
 
       if (anchor) {
             if (!anchor.length > 0) return (
@@ -40,12 +43,12 @@ const Button = ({
             return (
                   <>
                         {anchor ? (
-                              <a href={anchor} className={classNames('kg__button', "kr", className, buttonSettings)}>
+                              <a href={anchor} className={classNames('kg__button', "kr", className, buttonSettings)} disabled={isDisabled}>
                                     <span><FontAwesomeIcon icon={icon} /> {label}</span>
                               </a>
                         ) :
                               (
-                                    <button className={classNames('kg__button', "kr", className, buttonSettings)} onClick={onClickButton}>
+                                    <button disabled={isDisabled} className={classNames('kg__button', "kr", className, buttonSettings)} onClick={onClickButton}>
                                           <span>{label}</span>
                                     </button>
                               )
@@ -57,12 +60,12 @@ const Button = ({
       return (
             <>
                   {anchor ? (
-                        <a href={anchor} className={classNames('kg__button', "kr", className, buttonSettings)}>
+                        <a href={anchor} className={classNames('kg__button', "kr", className, buttonSettings)} disabled={isDisabled}>
                               <span>{label}</span>
                         </a>
                   ) :
                         (
-                              <button className={classNames('kg__button', "kr", className, buttonSettings)} onClick={onClickButton}>
+                              <button disabled={isDisabled} className={classNames('kg__button', "kr", className, buttonSettings)} onClick={onClickButton}>
                                     <span>{label}</span>
                               </button>
                         )
