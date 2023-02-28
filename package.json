@@ -14,7 +14,8 @@
   "scripts": {
     "k:bump": "gmvu bump",
     "k:init": "gmvu init",
-    "release": "standard-version"
+    "release": "standard-version",
+    "changelog": "auto-changelog -p && git add CHANGELOG.md"
   },
   "repository": {
     "type": "git",
@@ -28,6 +29,7 @@
     "@kagarisoft/gmvu-cli": "1.0.1-beta"
   },
   "devDependencies": {
+    "auto-changelog": "^2.4.0",
     "standard-version": "^9.5.0"
   }
 }

@@ -49,6 +49,12 @@ jobs:
         working-directory: ./packages/csc
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN}}
+      
+      - name: Generate Changelog
+        run: |
+          npm install
+          npm ci
+          npm run changelog
 
       - name: Commit files # transfer the new html files back into the repository
         run: |
