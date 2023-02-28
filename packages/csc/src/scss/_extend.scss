@@ -254,68 +254,70 @@
   }
 }
 
-%ColorPalette {
-  &-color {
-    color: clr(global, default);
-    &.primary {
-      color: clr(global, primary);
+%colorpalette {
+  &.palette {
+    &-color {
+      color: clr(global, default);
+      &.primary {
+        color: clr(global, primary);
+      }
+      &.secondary {
+        color: clr(global, secondary);
+      }
+      &.tertiary {
+        color: clr(global, tertiary);
+      }
+      &.quaternary {
+        color: clr(global, quaternary);
+      }
+      &.quinary {
+        color: clr(global, quinary);
+      }
+      &.dark {
+        color: clr(global, dark);
+      }
     }
-    &.secondary {
-      color: clr(global, secondary);
+    &-bg {
+      color: clr(global, default);
+      &.primary {
+        color: clr(global, primary);
+      }
+      &.secondary {
+        color: clr(global, secondary);
+      }
+      &.tertiary {
+        color: clr(global, tertiary);
+      }
+      &.quaternary {
+        color: clr(global, quaternary);
+      }
+      &.quinary {
+        color: clr(global, quinary);
+      }
+      &.dark {
+        color: clr(global, dark);
+      }
     }
-    &.tertiary {
-      color: clr(global, tertiary);
-    }
-    &.quaternary {
-      color: clr(global, quaternary);
-    }
-    &.quinary {
-      color: clr(global, quinary);
-    }
-    &.dark {
-      color: clr(global, dark);
-    }
-  }
-  &-bg {
-    color: clr(global, default);
-    &.primary {
-      color: clr(global, primary);
-    }
-    &.secondary {
-      color: clr(global, secondary);
-    }
-    &.tertiary {
-      color: clr(global, tertiary);
-    }
-    &.quaternary {
-      color: clr(global, quaternary);
-    }
-    &.quinary {
-      color: clr(global, quinary);
-    }
-    &.dark {
-      color: clr(global, dark);
-    }
-  }
-  &-color {
-    color: clr(global, default);
-    &.primary {
-      color: clr(global, primary);
-    }
-    &.secondary {
-      color: clr(global, secondary);
-    }
-    &.tertiary {
-      color: clr(global, tertiary);
-    }
-    &.quaternary {
-      color: clr(global, quaternary);
-    }
-    &.quinary {
-      color: clr(global, quinary);
-    }
-    &.dark {
-      color: clr(global, dark);
+    &-color {
+      color: clr(global, default);
+      &.primary {
+        color: clr(global, primary);
+      }
+      &.secondary {
+        color: clr(global, secondary);
+      }
+      &.tertiary {
+        color: clr(global, tertiary);
+      }
+      &.quaternary {
+        color: clr(global, quaternary);
+      }
+      &.quinary {
+        color: clr(global, quinary);
+      }
+      &.dark {
+        color: clr(global, dark);
+      }
     }
   }
 }
