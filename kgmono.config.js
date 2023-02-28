@@ -7,6 +7,5 @@ Include a list of package.json, for example:
 ]
 */
 module.exports = [
-  "packages/csc/package.json",
-  "packages/csc-react/package.json",
+  "packages/csc/package.json"
 ];
