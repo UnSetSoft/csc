@@ -37,25 +37,6 @@ jobs:
           npx --package node-sass@latest node-sass --version
           npx --package node-sass@latest node-sass --include-path scss packages/csc/src/scss/common.scss packages/csc/dist/css/common.min.css --output-style compressed
 
-      - name: Building JavaScript
-
-        run: |
-          npm i
-          npm ci
-          npm run js:build
-
-        working-directory: ./packages/csc
-
-      - name: Install dependencies
-        run: npm install
-        working-directory: ./packages/csc-react
-
-      - name: Building React
-        run: |
-          npm ci
-          npm run build
-        working-directory: ./packages/csc-react
-
       - name: Setup Node
         uses: actions/setup-node@v2
         with:
@@ -67,14 +48,6 @@ jobs:
           npm ci
           npm publish --access public --tag next
         working-directory: ./packages/csc
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN}}
-
-      - name: Publish CSC React
-        run: |
-          npm ci
-          npm publish --access public --tag next
-        working-directory: ./packages/csc-react
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN}}
 
