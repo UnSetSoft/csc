@@ -1,44 +1,46 @@
-.kg__palette {
-  &.colors {
-    color: clr(global, default);
-    &-primary {
-      color: clr(global, primary);
+.kg__color {
+  &.pl{
+    &-colors {
+      color: clr(global, default);
+      &-primary {
+        color: clr(global, primary);
+      }
+      &-secondary {
+        color: clr(global, secondary);
+      }
+      &-tertiary {
+        color: clr(global, tertiary);
+      }
+      &-quaternary {
+        color: clr(global, quaternary);
+      }
+      &-quinary {
+        color: clr(global, quinary);
+      }
+      &-dark {
+        color: clr(global, dark);
+      }
     }
-    &-secondary {
-      color: clr(global, secondary);
-    }
-    &-tertiary {
-      color: clr(global, tertiary);
-    }
-    &-quaternary {
-      color: clr(global, quaternary);
-    }
-    &-quinary {
-      color: clr(global, quinary);
-    }
-    &-dark {
-      color: clr(global, dark);
-    }
-  }
-  &.bg {
-    color: clr(global, default);
-    &-primary {
-      color: clr(global, primary);
-    }
-    &-secondary {
-      color: clr(global, secondary);
-    }
-    &-tertiary {
-      color: clr(global, tertiary);
-    }
-    &-quaternary {
-      color: clr(global, quaternary);
-    }
-    &-quinary {
-      color: clr(global, quinary);
-    }
-    &-dark {
-      color: clr(global, dark);
+    &-bg {
+      background-color: clr(global, default);
+      &-primary {
+        background-color: clr(global, primary);
+      }
+      &-secondary {
+        background-color: clr(global, secondary);
+      }
+      &-tertiary {
+        background-color: clr(global, tertiary);
+      }
+      &-quaternary {
+        background-color: clr(global, quaternary);
+      }
+      &-quinary {
+        background-color: clr(global, quinary);
+      }
+      &-dark {
+        background-color: clr(global, dark);
+      }
     }
   }
 }
