@@ -1,4 +1,4 @@
-﻿$version: "1.4.5";
+﻿$version: "1.5.8";
 
 /*!
 * CSC (Cascading style component)
@@ -34,6 +34,4 @@
 /*Layout*/
 @import "./layout/container.scss";
 @import "./layout/flex.scss";
-@import "./layout/colors.scss";
-
-
+@import "./layout/color.scss";
