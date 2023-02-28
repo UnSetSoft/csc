@@ -1,0 +1,5 @@
+.kg__color {
+  &.palette {
+    @extend %colors;
+  }
+}

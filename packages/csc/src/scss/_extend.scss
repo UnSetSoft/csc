@@ -208,25 +208,25 @@
 %Alert {
   width: 100%;
   padding: 10px;
-  background: #f9f9f9;
+  background: clr(global, default);
   border-radius: 10px;
   color: #444;
   &.kg {
     &-primary {
       background-color: clr(buttons, secondary);
-      color: #f9f9f9;
+      color: clr(global, default);
     }
     &-success {
       background-color: clr(buttons, success);
-      color: #f9f9f9;
+      color: clr(global, default);
     }
     &-warning {
       background-color: clr(buttons, warning);
-      color: #f9f9f9;
+      color: clr(global, default);
     }
     &-danger {
       background-color: clr(buttons, danger);
-      color: #f9f9f9;
+      color: clr(global, default);
     }
   }
 }
@@ -247,7 +247,75 @@
       border: 1px solid #b9b9b9;
     }
     &-br {
-      border-radius: 10px;
+      &-10 {
+        border-radius: 10px;
+      }
+    }
+  }
+}
+
+%colors {
+  &-color {
+    color: clr(global, default);
+    &.primary {
+      color: clr(global, primary);
+    }
+    &.secondary {
+      color: clr(global, secondary);
+    }
+    &.tertiary {
+      color: clr(global, tertiary);
+    }
+    &.quaternary {
+      color: clr(global, quaternary);
+    }
+    &.quinary {
+      color: clr(global, quinary);
+    }
+    &.dark {
+      color: clr(global, dark);
+    }
+  }
+  &-bg {
+    color: clr(global, default);
+    &.primary {
+      color: clr(global, primary);
+    }
+    &.secondary {
+      color: clr(global, secondary);
+    }
+    &.tertiary {
+      color: clr(global, tertiary);
+    }
+    &.quaternary {
+      color: clr(global, quaternary);
+    }
+    &.quinary {
+      color: clr(global, quinary);
+    }
+    &.dark {
+      color: clr(global, dark);
+    }
+  }
+  &-color {
+    color: clr(global, default);
+    &.primary {
+      color: clr(global, primary);
+    }
+    &.secondary {
+      color: clr(global, secondary);
+    }
+    &.tertiary {
+      color: clr(global, tertiary);
+    }
+    &.quaternary {
+      color: clr(global, quaternary);
+    }
+    &.quinary {
+      color: clr(global, quinary);
+    }
+    &.dark {
+      color: clr(global, dark);
     }
   }
 }

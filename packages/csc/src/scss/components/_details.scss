@@ -1,7 +1,7 @@
 .kg__details {
   font-size: 1rem;
   width: 100%;
-  background: #f4f4f4;
+  background: clr(global, default);
   border-radius: 8px;
   position: map-get($position, relative);
 
@@ -15,7 +15,7 @@
     font-weight: 300;
     line-height: 1.5;
     p {
-      color: black;
+      color: clr(global, dark);
     }
   }
 
@@ -25,7 +25,7 @@
     padding: 10px;
     display: map-get($display, flex);
     position: map-get($position, relative);
-    color: black;
+    color: clr(global, dark);
 
     &::-webkit-details-marker {
       display: map-get($display, none);

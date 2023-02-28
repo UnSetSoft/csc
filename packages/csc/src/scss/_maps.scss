@@ -36,3 +36,22 @@ $cursors: (
   no-drop: no-drop,
   progress: progress,
 );
+
+$flex:(
+  direction: (
+    column: "column",
+    row: "row",
+    row_reverse: "row-reverse",
+    column_reverse: "column-reverse"
+  )
+  wrap: (
+    nowrap: nowrap
+    wrap: wrap,
+    wrap_reverse: "wrap-reverse"
+  )
+);
+
+@function flex($base, $shade: base) {
+  $f: map-get(map-get($flex, $base), $shade);
+  @return $f;
+}
