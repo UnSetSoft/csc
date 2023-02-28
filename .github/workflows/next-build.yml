@@ -1,15 +1,17 @@
-name: CI
+name: Next Build
 on:
+  workflow_dispatch:
   push:
-    branches: [master]
-  pull_request:
-    branches: [master]
+    branches: [next]
 
 env:
   DATE: $(date +%FT%TZ)
-
+permissions:
+  contents: read
 jobs:
   build:
+    permissions:
+      contents: write
     runs-on: ubuntu-latest
 
     steps:
@@ -17,7 +19,14 @@ jobs:
         uses: actions/checkout@v3
         with:
           repository: ${{ github.event.pull_request.head.repo.full_name }}
-          ref: 'master'
+          ref: "next"
+
+      - run: git fetch --tags -f
+
+      - name: get-npm-version
+        id: package-version
+        uses: martinbeentjes/npm-get-version-action@main
+
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
@@ -51,12 +60,12 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: "${{ env.NODE }}"
-          registry-url: 'https://registry.npmjs.org'
+          registry-url: "https://registry.npmjs.org"
 
       - name: Publish CSC
         run: |
           npm ci
-          npm publish --access public
+          npm publish --access public --tag next
         working-directory: ./packages/csc
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN}}
@@ -64,21 +73,28 @@ jobs:
       - name: Publish CSC React
         run: |
           npm ci
-          npm publish --access public
+          npm publish --access public --tag next
         working-directory: ./packages/csc-react
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN}}
 
-
-
-          
       - name: Commit files # transfer the new html files back into the repository
         run: |
           git config --local user.name "KagariSoft-dev "
           git add .
           git commit -m "🏗️ Files updated" -a
+          git tag v${{ steps.package-version.outputs.current-version}}
+
       - name: Push changes # push the output folder to your repo
         uses: ad-m/github-push-action@master
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           force: true
+
+      - name: Release 📦
+        uses: softprops/action-gh-release@v1
+        with:
+          draft: false
+          prerelease: true
+          generate_release_notes: true
+          tag_name: v${{ steps.package-version.outputs.current-version}}

@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
-import { Button, Details, Alert, Image } from './lib'
+import { Button, Acordeon, Alert, Image, Container } from './lib'
+import { faLaptop } from '@fortawesome/free-solid-svg-icons'
 
+import './assets/css/main.css'
 function App() {
   const [Count, setCount] = useState(0)
 
@@ -10,19 +12,31 @@ function App() {
 
   return <div className="App">
 
-    <Button label="Hello world" customClass="" styleArg="success" onClickButton={button} />
+    <Container className="test" >
+      <Button label="Hello world" customClass="aaaa" styleArg="success" onClickButton={button} />
 
-    {Count}
+      {Count}
 
-    <Details title="hello" body="hello" />
+      <Acordeon
+        title="Lorem ipsum dolor sit amet consectetur adipisicing elit."
+        icon={faLaptop}
+        iconColor="000"
 
-    <Alert type>
-      Hola mundo
-    </Alert>
+      >
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum earum, fugit praesentium exercitationem aliquam magnam officia nemo. Ea quasi voluptate, voluptatum qui tempora atque. Facilis tempora sed ea nulla incidunt!
+          hello world
+        </p>
+      </Acordeon>
 
-    <Image
-      src="https://placehold.jp/3d4070/ffffff/500x150.png"
-      alt="hey!" />
+      <Alert type>
+        Hola mundo
+      </Alert>
+
+      <Image
+        src="https://placehold.jp/3d4070/ffffff/500x150.png"
+        alt="hey!" />
+    </Container>
   </div>;
 }
 
