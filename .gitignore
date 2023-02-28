@@ -2,3 +2,4 @@
 /yarn-error.log
 yarn.lock
 /packages/csc-react
+package-lock.json
