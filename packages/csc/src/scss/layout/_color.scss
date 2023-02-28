@@ -1,3 +1,44 @@
-.kg__color {
-  @extend %colorpalette;
+.kg__palette {
+  &.colors {
+    color: clr(global, default);
+    &-primary {
+      color: clr(global, primary);
+    }
+    &-secondary {
+      color: clr(global, secondary);
+    }
+    &-tertiary {
+      color: clr(global, tertiary);
+    }
+    &-quaternary {
+      color: clr(global, quaternary);
+    }
+    &-quinary {
+      color: clr(global, quinary);
+    }
+    &-dark {
+      color: clr(global, dark);
+    }
+  }
+  &.bg {
+    color: clr(global, default);
+    &-primary {
+      color: clr(global, primary);
+    }
+    &-secondary {
+      color: clr(global, secondary);
+    }
+    &-tertiary {
+      color: clr(global, tertiary);
+    }
+    &-quaternary {
+      color: clr(global, quaternary);
+    }
+    &-quinary {
+      color: clr(global, quinary);
+    }
+    &-dark {
+      color: clr(global, dark);
+    }
+  }
 }
