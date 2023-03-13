@@ -39,15 +39,15 @@ $cursors: (
 
 $flex:(
   direction: (
-    column: "column",
-    row: "row",
-    row_reverse: "row-reverse",
-    column_reverse: "column-reverse"
+    column: column,
+    row: row,
+    row_reverse: row-reverse,
+    column_reverse: column-reverse
   ),
   wrap: (
     nowrap: nowrap,
     wrap: wrap,
-    wrap_reverse: "wrap-reverse"
+    wrap_reverse: wrap-reverse
   )
 );
 
