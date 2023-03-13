@@ -7,9 +7,8 @@ The updates will be published little by little and will not follow a specific or
 
 > Feel free to Fork and add things if you want to add more styles or fix existing ones.
 
-For how to use check the [wiki](https://classstyle.netlify.app/docs/Getting%20started/intro) (Work in Progress).
+For how to use check the [wiki](https://github.com/UnSetSoft/csc/wiki)
 
-> If you found an error in the documentation you can create a poll or a bug report in [this repository.](https://github.com/KagariSoft/csc-doc)
 
 ## How to install
 
