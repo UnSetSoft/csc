@@ -71,22 +71,19 @@
     }
     &-alc {
       &-flex_start {
-        justify-content: flex-start;
+        align-content: flex-start;
       }
       &-flex_end {
-        justify-content: flex-end;
+        align-content: flex-end;
       }
       &-flex_center {
-        justify-content: center;
+        align-content: center;
       }
       &-stretch {
-        align-items: stretch;
+        align-content: stretch;
       }
-      &-space_between {
-        justify-content: space-between;
-      }
-      &-space_around {
-        justify-content: space-around;
+      &-baseline {
+        align-content: baseline;
       }
     }
   }

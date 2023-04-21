@@ -28,3 +28,17 @@ img,
 svg {
   vertical-align: middle;
 }
+
+a[disabled]{
+  cursor: not-allowed;
+  opacity: 0.5;
+  
+}
+
+a[disabled]:hover{
+  text-decoration: none!important;
+}
+
+[hidden] {
+  display: none !important;
+}
